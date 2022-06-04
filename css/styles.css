@@ -1,0 +1,78 @@
+/* задаю основний колір, фон, та шрифт  */
+body
+{
+    background: #FFFFFF;
+    color: #757575;
+    font-family: 'Roboto', sans-serif;
+}
+
+a
+{
+    text-decoration: none;
+}
+/* #757575 текст основний */
+/* #212121 текст заголовки */
+/* #2F303A колір шапки та футера */
+/* #E5E5E колір фону основний */
+/* rgba(33, 150, 243, 1) колір ектів кнопка */
+
+a:hover,
+a:focus
+{
+    color: rgba(33, 150, 243, 1);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+button:hover,
+button:focus
+{
+       background-color: rgba(33, 150, 243, 1);
+       color: rgba(255, 255, 255, 1);
+       border-radius: 4px;
+       text-decoration: underline;
+       cursor: pointer;
+}
+
+.logo
+{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 31px;
+    letter-spacing: 0.03em;
+    color:rgba(33, 150, 243, 1);
+}
+
+.logo > span
+{
+  color: #212121;
+}
+
+footer > .logo > span 
+{
+color: white;
+}
+
+.nav-menu-link
+{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: #212121;
+}
+
+.nav-auth-link
+{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: #212121;
+}
