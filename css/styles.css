@@ -1,39 +1,32 @@
+:root
+{
+    --primary-text-color: #757575;
+    --title-text-color: #212121;
+    --accent-text-color: rgba(33, 150, 243, 1);
+    --background-color: #FFFFFF;
+}
+
 /* задаю основний колір, фон, та шрифт  */
 body
 {
-    background: #FFFFFF;
-    color: #757575;
+    background: var(--background-color);
+    color: var(--primary-text-color);
     font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
 }
 
-a
+a, button
 {
     text-decoration: none;
+    cursor: pointer;
 }
 /* #757575 текст основний */
 /* #212121 текст заголовки */
 /* #2F303A колір шапки та футера */
 /* #E5E5E колір фону основний */
 /* rgba(33, 150, 243, 1) колір ектів кнопка */
-
-a:hover,
-a:focus
-{
-    color: rgba(33, 150, 243, 1);
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-button:hover,
-button:focus
-{
-       background-color: rgba(33, 150, 243, 1);
-       color: rgba(255, 255, 255, 1);
-       border-radius: 4px;
-       text-decoration: underline;
-       cursor: pointer;
-}
-
+/* приміняємо стилі до логотипа */
 .logo
 {
     font-family: 'Raleway';
@@ -42,20 +35,27 @@ button:focus
     font-size: 26px;
     line-height: 31px;
     letter-spacing: 0.03em;
-    color:rgba(33, 150, 243, 1);
+    color: var(--accent-text-color);
+}
+
+.logo:hover,
+.logo:active
+{
+    color: var(--accent-text-color);
+    text-decoration: underline;
 }
 
 .logo > span
 {
-  color: #212121;
+    color: var(--title-text-color);
 }
 
 footer > .logo > span 
 {
-color: white;
+color: var(--background-color);
 }
-
-.nav-menu-link
+/* приміняємо стилі до посилань в шапці, окрім пошти та телефону */
+.nav-menu .link
 {
     font-family: 'Roboto';
     font-style: normal;
@@ -63,10 +63,10 @@ color: white;
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.02em;
-    color: #212121;
+    color: var(--title-text-color);
 }
-
-.nav-auth-link
+/* приміняємо стилі до пошти та телфону в шапці */
+.nav-auth .link
 {
     font-family: 'Roboto';
     font-style: normal;
@@ -74,5 +74,123 @@ color: white;
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.02em;
-    color: #212121;
+    color: var(--title-text-color);
+}
+
+.nav-menu .link:hover,
+.nav-auth .link:hover,
+.nav-menu .link:focus,
+.nav-auth .link:focus
+{
+    color: var(--accent-text-color);
+    text-decoration: underline;
+}
+/* main частина перша секція */
+.slogan {
+    background-color: #2F303A;
+}
+
+.slogan-text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--background-color);
+}
+
+.slogan-button {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    background-color: var(--accent-text-color);
+    color: var(--background-color);
+}
+/* main друга секція */
+/* розмітка заголовкі переваг */
+.feature .title
+{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--title-text-color);
+}
+/* розмітка тексту переваг */
+.feature-paragraf
+{
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+/* main третя секція */
+/* розмітка заголовку, також розмічаємо і для наступної секції */
+.block-title 
+{
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-style: normal;
+    line-height: 42px;
+    font-size: 36px;
+    letter-spacing: 0.03em;
+    color: var(--title-text-color);
+}
+/* розмітка малюнків */
+/* .block-img > a > img
+{
+
+} */
+/*  main четверта секція */
+/* розмітка блоків */
+.team-title{
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-style: normal;
+    line-height: 19px;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    color: var(--title-text-color);
+}
+
+.team-text{
+    font-size: 16px;
+    line-height: 19px;
+}
+/* розмітка підвалу */
+.footer{
+    background-color: #2F303A;
+}
+
+.footer-address{
+    font-size: 14px;
+    line-height: 1.71;
+    color:var(--background-color);
+}
+
+.footer-mail,
+.footer-tel{
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
+.footer-address:hover,
+.footer-mail:hover,
+.footer-tel:hover,
+.footer-address:active,
+.footer-mail:active,
+.footer-tel:active {
+    text-decoration: underline;
+    text-decoration-color: var(--accent-text-color);
+    cursor: pointer;
 }
