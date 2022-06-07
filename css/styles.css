@@ -228,10 +228,8 @@ color: var(--background-color);
     color: var(--primary-text-color) 
 }
 
-.examples-title:hover,
-.examples-text:hover,
-.examples-title:active,
-.examples-text:active{
+.point:hover,
+.point:active{
     text-decoration: underline;
     text-decoration-color: var(--accent-text-color);
 } 
