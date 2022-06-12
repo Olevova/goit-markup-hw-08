@@ -43,8 +43,11 @@ padding-top: 0px;
 }
  .container {
     width: 1200px;
-    background-color: rgb(197, 246, 246);
+    /* background-color: rgb(197, 246, 246); */
     border: 1px solid teal;
+    margin-left: auto;
+    margin-right: auto;
+
  }
 
 a, button {
@@ -61,6 +64,7 @@ h1,h2,h3,ul{
     padding-bottom: 0px;
     padding-top: 0px;
     margin: 0px;
+    padding-left: 0px;
 }
 /* #757575 текст основний */
 /* #212121 текст заголовки */
@@ -75,7 +79,7 @@ h1,h2,h3,ul{
     font-size: 26px;
     line-height: 1.19;
     color: var(--accent-text-color);
-
+    
 }
 
 .logo:hover,
@@ -85,11 +89,45 @@ h1,h2,h3,ul{
 
 .logo > span {
     color: var(--title-text-color);
+    display:inline-block; 
 }
 
 footer > .logo > span {
-color: var(--background-color);
+    color: var(--background-color);
 }
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu {
+    display:flex;
+    align-items: center;
+    padding-left: 93px;
+
+}
+.nav-menu>li:not(:last-child){
+    
+    padding-right: 50px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+    margin-bottom: 25px;
+    margin-right: 331px;
+        
+}
+.nav-auth{
+    display: flex;
+    align-items: center;
+}
+.nav-auth > li:not(:last-child){
+    padding-right: 50px;
+}
+
 /* приміняємо стилі до посилань в шапці, окрім пошти та телефону */
 .nav-link {
     font-family: 'Roboto';
@@ -139,8 +177,8 @@ color: var(--background-color);
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--background-color);
-    margin-top: 200px;
-    margin-bottom: 30px;
+    margin: 200px 270px 30px 270px;
+    width: 696px;
 }
 
 .slogan-button {
@@ -150,6 +188,13 @@ color: var(--background-color);
     font-size: 16px;
     line-height: 1.88;
     margin-bottom: 200px;
+    border-radius: 4px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    
+
     /* background-color: var(--accent-text-color);
     color: var(--background-color); приміняємо другий клас active*/
 }
