@@ -25,11 +25,26 @@ body {
     font-size: 14px;
     letter-spacing: 0.03em;
 }
- .container {
-    width: 1200px;
+
+section {
     padding-top: 94px;
     padding-bottom: 94px;
+    border: 2px solid red;
+}
+
+.pd-nul{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.block {
+padding-top: 0px;
+
+}
+ .container {
+    width: 1200px;
     background-color: rgb(197, 246, 246);
+    border: 1px solid teal;
  }
 
 a, button {
@@ -40,6 +55,12 @@ a, button {
 
 li {
     list-style: none;
+}
+
+h1,h2,h3,ul{
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin: 0px;
 }
 /* #757575 текст основний */
 /* #212121 текст заголовки */
@@ -54,6 +75,7 @@ li {
     font-size: 26px;
     line-height: 1.19;
     color: var(--accent-text-color);
+
 }
 
 .logo:hover,
@@ -77,6 +99,7 @@ color: var(--background-color);
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--title-text-color);
+    display: inline-block;
 }
 /* приміняємо стилі до пошти та телфону в шапці */
 .nav-auth .link {
@@ -87,6 +110,7 @@ color: var(--background-color);
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--title-text-color);
+    display: inline-block;
 }
 
 .nav-active {
@@ -115,6 +139,8 @@ color: var(--background-color);
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--background-color);
+    margin-top: 200px;
+    margin-bottom: 30px;
 }
 
 .slogan-button {
@@ -123,11 +149,13 @@ color: var(--background-color);
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
+    margin-bottom: 200px;
     /* background-color: var(--accent-text-color);
     color: var(--background-color); приміняємо другий клас active*/
 }
 /* main друга секція */
 /* розмітка заголовкі переваг */
+
 .feature .title {
     font-family: 'Roboto';
     font-weight: 700;
@@ -140,6 +168,8 @@ color: var(--background-color);
 .feature-paragraf {
     font-size: 14px;
     line-height: 1.71;
+    margin-top: 10px;
+    margin-bottom: 0px;
 }
 /* main третя секція */
 /* розмітка заголовку, також розмічаємо і для наступної секції */
@@ -149,6 +179,8 @@ color: var(--background-color);
     font-size: 36px;
     line-height: 1.16;
     color: var(--title-text-color);
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 /* розмітка малюнків */
 /* .block-img > a > img
