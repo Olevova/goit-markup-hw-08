@@ -16,6 +16,7 @@ box-sizing: border-box;
     --btn-background: #f5f4fa;
     --slogan-background: #2F303A;
     --footer-color: rgba(255, 255, 255, 0.6);
+    --header-border: #ECECEC;
 }
 /* задаю основний колір, фон, та шрифт  */
 body {
@@ -24,6 +25,9 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     letter-spacing: 0.03em;
+}
+header{
+    border-bottom:1px solid var(--header-border) ;
 }
 
 section {
@@ -38,9 +42,9 @@ section {
 }
 
 .block {
-padding-top: 0px;
-
+    padding-top: 0px;
 }
+
  .container {
     width: 1200px;
     /* background-color: rgb(197, 246, 246); */
@@ -88,28 +92,30 @@ h1,h2,h3,ul{
 }
 
 .logo > span {
+    display: inline-block;
+
     color: var(--title-text-color);
-    display:inline-block; 
+     
 }
 
 footer > .logo > span {
     color: var(--background-color);
 }
-
+/* загальний клас для флекса */
 .flex{
     display: flex;
     align-items: center;
 }
-
+/* приміняємо флекс до меню хедера */
 .nav-menu {
     display:flex;
     align-items: center;
-    padding-left: 93px;
-
+    margin-left: 93px;
 }
-.nav-menu>li:not(:last-child){
+/* задаємо відступи між елементами */
+.nav-menu>li:not(:last-child) {
     
-    padding-right: 50px;
+    margin-right: 50px;
 }
 
 .nav {
@@ -117,19 +123,23 @@ footer > .logo > span {
     align-items: center;
     margin-top: 24px;
     margin-bottom: 25px;
-    margin-right: 331px;
         
 }
-.nav-auth{
+
+.nav-auth {
     display: flex;
     align-items: center;
+    margin-left: 331px;
 }
+/* задаємо відступ між елементами*/
 .nav-auth > li:not(:last-child){
-    padding-right: 50px;
+    margin-right: 50px;
 }
 
 /* приміняємо стилі до посилань в шапці, окрім пошти та телефону */
 .nav-link {
+    display: inline-block;
+
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
@@ -137,10 +147,12 @@ footer > .logo > span {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--title-text-color);
-    display: inline-block;
+    border: 2px dashed #2196F3;
 }
 /* приміняємо стилі до пошти та телфону в шапці */
 .nav-auth .link {
+    display: inline-block;
+
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
@@ -148,7 +160,6 @@ footer > .logo > span {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--title-text-color);
-    display: inline-block;
 }
 
 .nav-active {
@@ -169,6 +180,9 @@ footer > .logo > span {
 }
 
 .slogan-text {
+    margin: 200px 270px 30px 270px;
+    width: 696px;
+
     font-family: 'Roboto';
     font-weight: 900;
     font-size: 44px;
@@ -177,25 +191,21 @@ footer > .logo > span {
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--background-color);
-    margin: 200px 270px 30px 270px;
-    width: 696px;
 }
 
 .slogan-button {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
     margin-bottom: 200px;
     border-radius: 4px;
     display: block;
     margin-left: auto;
     margin-right: auto;
 
-    
-
-    /* background-color: var(--accent-text-color);
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+          /* background-color: var(--accent-text-color);
     color: var(--background-color); приміняємо другий клас active*/
 }
 /* main друга секція */
@@ -216,9 +226,27 @@ footer > .logo > span {
     margin-top: 10px;
     margin-bottom: 0px;
 }
+.feature-title{
+    text-align: center;
+    
+}
+
+.flex>li{
+    width: 270px;
+    height: 101px;
+}
+
+.flex>li+li{
+    border: 1px dashed #2196F3;
+    border-left: 30px;
+}
 /* main третя секція */
 /* розмітка заголовку, також розмічаємо і для наступної секції */
 .block-title {
+    width: 376px;
+    height: 42px;
+    margin: 0 auto;
+
     font-family: 'Roboto';
     font-weight: 700;
     font-size: 36px;
@@ -226,6 +254,16 @@ footer > .logo > span {
     color: var(--title-text-color);
     margin-top: 0px;
     margin-bottom: 0px;
+    text-align: center;
+}
+.block-flex{
+    border: 2px solid black;
+    display: inline-flex;
+    
+}
+
+.block-flex>li:not(:last-child) {
+    margin-right: 30px;
 }
 /* розмітка малюнків */
 /* .block-img > a > img
