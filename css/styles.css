@@ -272,18 +272,32 @@ footer > .logo > span {
 } */
 /*  main четверта секція */
 /* розмітка блоків */
+.block-title {
+    margin-bottom: 50px;
+}
+
 .team-title {
     font-family: 'Roboto';
     font-weight: 500;
     font-size: 16px;
     line-height: 1.18;   
     color: var(--title-text-color);
+    
 }
 
 .team-text {
     font-size: 16px;
     line-height: 1.18;
 }
+
+.team-flex{
+    display: flex;
+}
+
+.team-flex>li+li{
+    margin-left: 30px;
+}
+
 /* розмітка підвалу */
 .footer {
     background-color: var(--slogan-background);
