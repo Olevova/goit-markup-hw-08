@@ -51,8 +51,16 @@ section {
     border: 1px solid teal;
     margin-left: auto;
     margin-right: auto;
-
  }
+
+ .container-main {
+    width: 1170px;
+    /* background-color: rgb(197, 246, 246); */
+    border: 1px solid teal;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
 
 a, button {
     text-decoration: none;
@@ -117,13 +125,16 @@ footer > .logo > span {
     
     margin-right: 50px;
 }
-
+/* задаємо розмір логотипа */
+.nav>a {
+    width: 145px;
+}
+/* робимо флекс бокси */
 .nav {
     display: flex;
     align-items: center;
     margin-top: 24px;
-    margin-bottom: 25px;
-        
+    margin-bottom: 25px;     
 }
 
 .nav-auth {
@@ -238,7 +249,7 @@ footer > .logo > span {
 
 .flex>li+li{
     border: 1px dashed #2196F3;
-    border-left: 30px;
+    margin-left: 30px;
 }
 /* main третя секція */
 /* розмітка заголовку, також розмічаємо і для наступної секції */
@@ -257,9 +268,12 @@ footer > .logo > span {
     text-align: center;
 }
 .block-flex{
-    border: 2px solid black;
-    display: inline-flex;
-    
+    display: flex;
+
+}
+
+.block-img {
+    width: 370px;
 }
 
 .block-flex>li:not(:last-child) {
@@ -277,23 +291,32 @@ footer > .logo > span {
 }
 
 .team-title {
+    margin-bottom: 10px;
+
     font-family: 'Roboto';
     font-weight: 500;
     font-size: 16px;
     line-height: 1.18;   
     color: var(--title-text-color);
+    text-align: center;
     
 }
 
 .team-text {
     font-size: 16px;
     line-height: 1.18;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 30px;
 }
 
 .team-flex{
     display: flex;
 }
 
+.team-link>img {
+    margin-bottom: 30px;
+}
 .team-flex>li+li{
     margin-left: 30px;
 }
@@ -301,6 +324,20 @@ footer > .logo > span {
 /* розмітка підвалу */
 .footer {
     background-color: var(--slogan-background);
+}
+.footer .logo {
+    display: inline-block;
+    width: 145px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+address {
+    display: block;
+    margin-bottom: 60px;
+}
+
+.footer .logo>span {
+    color: var(--background-color);
 }
 
 .footer-address {
