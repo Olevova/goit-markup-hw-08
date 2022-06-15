@@ -348,7 +348,7 @@ footer > .logo > span {
 }
 address {
     display: block;
-    margin-bottom: 60px;
+    padding-bottom: 60px;
 }
 
 .footer .logo>span {
