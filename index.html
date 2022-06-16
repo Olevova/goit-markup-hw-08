@@ -41,8 +41,8 @@
     </header> 
     <main>
     <!--Секція перша з Заголовком, можна сказати Головним посилом сайту, та з кнопкою замовлення послуги-->
-    <section class="slogan pd-nul">
-        <div class="container-slogan">
+    <section class="slogan hero">
+        <div class="container">
         <h1 class="slogan-text">
             Эффективные решения для вашего бизнеса 
         </h1>
@@ -51,7 +51,7 @@
     </section>
     <!--Секція друга Список Переваг-->
     <section class="feature">
-        <div class="container-main">
+        <div class="container">
         <h2 class="feature-title">Наши преимущества</h2>  <!--буде схована, вставлена для кращого розуміння для людини що переглядає HTML-->
         <ul class="flex">
             <li>
@@ -85,7 +85,7 @@
     </section>
     <!--Секція третя Чим ми займаємось-->
     <section class="block">
-        <div class="container-main">
+        <div class="container">
         <h2 class="block-title">Чем мы занимаемся</h2>
         <ul class="block-flex">
             <li class="block-img">
@@ -102,26 +102,26 @@
     </section>
     <!--Секція четверта Наша команда-->
     <section class="team" >
-        <div class="container-main">
+        <div class="container">
         <h2 class="block-title">Наша команда</h2>
         <ul class="team-flex">
             <li class="team-block">
-                <a class="team-link" href="/"><img src="./images/igor.jpg" alt="Игорь Демьяненко" width="270" height="260"></a>
+                <img class="team-card" src="./images/igor.jpg" alt="Игорь Демьяненко" width="270" height="260">
                 <h3 class="team-title">Игорь Демьяненко</h3>
                 <p class="team-text" lang="en">Product Designer</p>
             </li>
             <li class="team-block">
-                <a class="team-link" href="/"><img src="./images/olga.jpg" alt="Ольга Репина" width="270" height="260"></a>
+                <img class="team-card" src="./images/olga.jpg" alt="Ольга Репина" width="270" height="260">
                 <h3 class="team-title">Ольга Репина</h3>
                 <p class="team-text" lang="en">Frontend Developer</p>
             </li>
             <li class="team-block">
-                <a class="team-link" href="/"><img src="./images/nikolay.jpg" alt="Николай Тарасов" width="270" height="260"></a>
+                <img class="team-card" src="./images/nikolay.jpg" alt="Николай Тарасов" width="270" height="260">
                 <h3 class="team-title">Николай Тарасов</h3>
                 <p class="team-text" lang="en">Marketing</p>
             </li>
             <li class="team-block">
-                <a class="team-link" href="/"><img src="./images/muhaylo.jpg" alt="Михаил Ермаков" width="270" height="260"></a>
+                <img class="team-card" src="./images/muhaylo.jpg" alt="Михаил Ермаков" width="270" height="260">
                 <h3 class="team-title">Михаил Ермаков</h3>
                 <p class="team-text" lang="en">UI Designer</p>
             </li>
@@ -135,13 +135,15 @@
         <a class="logo" href="/">Web<span>Studio</span></a>
         <address>
             <ul>
-                <li>
-                    <a class="footer-address" href="https://www.google.com.ua/maps/@49.4184014,26.9991914,14zhttps://www.google.com.ua/maps/place/%D0%B1%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80+%D0%9B%D0%B5%D1%81%D1%96+%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%BA%D0%B8,+26,+%D0%9A%D0%B8%D1%97%D0%B2,+02000/@50.4265807,30.5361971,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383858">г. Киев, пр-т Леси Украинки, 26</a>
+                <li class="footer-info">
+                    <a class="footer-address"
+                        href="https://www.google.com.ua/maps/@49.4184014,26.9991914,14zhttps://www.google.com.ua/maps/place/%D0%B1%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80+%D0%9B%D0%B5%D1%81%D1%96+%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%BA%D0%B8,+26,+%D0%9A%D0%B8%D1%97%D0%B2,+02000/@50.4265807,30.5361971,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383858">г.
+                        Киев, пр-т Леси Украинки, 26</a>
                 </li>
-                <li>
+                <li class="footer-info">
                     <a class="footer-mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
                 </li>
-                <li>
+                <li class="footer-info">
                     <a class="footer-tel" href="tel:+380961111111">+38 096 111 11 11</a>
                 </li>
             </ul>

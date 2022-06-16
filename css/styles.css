@@ -9,8 +9,8 @@ box-sizing: border-box;
 }
 
 :root {
-    --primary-text-color: #757575;
-    --title-text-color: #212121;
+    --primary-text-color: rgb(117, 117, 117);
+    --title-text-color: rgb(33, 33, 33);
     --accent-text-color: rgba(33, 150, 243, 1);
     --background-color: #FFFFFF;
     --btn-background: #f5f4fa;
@@ -36,9 +36,10 @@ section {
     padding-bottom: 94px;
 }
 
-.pd-nul{
-    padding-top: 0px;
-    padding-bottom: 0px;
+.hero{
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-color:var(--slogan-background);
 }
 
 .block {
@@ -50,25 +51,14 @@ section {
     /* background-color: rgb(197, 246, 246); */
     margin-left: auto;
     margin-right: auto;
- }
-
- .container-slogan {
-     width: 1200px;
-     /* background-color: rgb(197, 246, 246); */
-     margin-left: auto;
-     margin-right: auto;
-     text-align: center;
- }
-
- .container-main {
-    width: 1200px;
-    /* background-color: rgb(197, 246, 246); */
-    margin-left: auto;
-    margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
  }
 
+.slogan 
+    {
+        text-align: center;
+}
 
 a, button {
     text-decoration: none;
@@ -93,6 +83,9 @@ h1,h2,h3,ul{
 /* rgba(33, 150, 243, 1) колір ектів кнопка */
 /* приміняємо стилі до логотипа */
 .logo {
+    padding-top: 24px;
+    padding-bottom: 25px;
+
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
@@ -139,15 +132,13 @@ footer > .logo > span {
 /* робимо флекс бокси */
 .nav {
     display: flex;
-    align-items: center;
-    margin-top: 24px;
-    margin-bottom: 25px;     
+    align-items: center;    
 }
 
 .nav-auth {
     display: flex;
     align-items: center;
-    margin-left: 331px;
+    margin-left: auto;
 }
 /* задаємо відступ між елементами*/
 .nav-auth > li:not(:last-child){
@@ -157,6 +148,8 @@ footer > .logo > span {
 /* приміняємо стилі до посилань в шапці, окрім пошти та телефону */
 .nav-link {
     display: inline-block;
+    padding-top: 25px;
+    padding-bottom: 25px;
 
     font-family: 'Roboto';
     font-style: normal;
@@ -176,7 +169,7 @@ footer > .logo > span {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    color: var(--title-text-color);
+    color: var(--primary-text-color);
 }
 
 .nav-active {
@@ -192,12 +185,7 @@ footer > .logo > span {
 
 
 /* main частина перша секція */
-.container-slogan{
-    background-color: var(--slogan-background);
-}
-
 .slogan-text {
-    padding: 200px 0px 0px 0px;
     margin: 0 auto;
     width: 696px;
 
@@ -212,8 +200,8 @@ footer > .logo > span {
 }
 
 .slogan-button {
+    padding:10px 32px;
     margin-top: 30px;
-    margin-bottom: 200px;
     border-radius: 4px;
     display: inline-block;
     
@@ -260,10 +248,6 @@ footer > .logo > span {
 /* main третя секція */
 /* розмітка заголовку, також розмічаємо і для наступної секції */
 .block-title {
-    width: 376px;
-    height: 42px;
-    margin: 0 auto;
-
     font-family: 'Roboto';
     font-weight: 700;
     font-size: 36px;
@@ -272,7 +256,7 @@ footer > .logo > span {
     margin-top: 0px;
     margin-bottom: 0px;
     text-align: center;
-}
+    }
 .block-flex{
     display: flex;
 
@@ -280,6 +264,12 @@ footer > .logo > span {
 
 .block-img {
     width: 370px;
+}
+
+.block-img>a>img {
+    display: block;
+    max-height:100%;
+    height: auto;
 }
 
 .block-flex>li:not(:last-child) {
@@ -327,9 +317,10 @@ footer > .logo > span {
 .team-block {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+    background-color: var(--background-color);
 }
 
-.team-link>img {
+.team-card {
     margin-bottom: 30px;
 }
 .team-flex>li+li{
@@ -339,16 +330,17 @@ footer > .logo > span {
 /* розмітка підвалу */
 .footer {
     background-color: var(--slogan-background);
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 .footer .logo {
     display: inline-block;
-    width: 145px;
-    margin-top: 60px;
     margin-bottom: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 address {
     display: block;
-    padding-bottom: 60px;
 }
 
 .footer .logo>span {
@@ -360,6 +352,10 @@ address {
     line-height: 1.71;
     color:var(--background-color);
     
+}
+
+.footer-info:not(:last-child) {
+    margin-bottom: 9px;
 }
 
 .footer-mail,
@@ -381,14 +377,15 @@ address {
 }
 /* Розмітка PORTFOLIO */
 /* header and footer - розмітка відповідає розмітці index.html */
-.examples>.container-main>h1 {
+.examples>.container>h1 {
+    display: none;
     text-align: center;
 }
 
 .examples-menu {
     margin: 0 auto;
     display: flex;
-    width: 611px;
+    width: auto;
     justify-content: center;
     align-items: flex-start;
 }
@@ -400,7 +397,9 @@ address {
     font-size: 16px;
     line-height: 1.62;
     text-align: center;
-    margin-bottom: 16px;
+    margin-bottom: 50px;
+    padding:6px 22px;
+    border-width: 0;
 }
 
 .examples-menu>li:not(:last-child){
