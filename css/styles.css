@@ -423,10 +423,8 @@ address {
 }
 
 .exampl-flex {
-    width: 368px;
     margin-right: 30px;
     margin-bottom: 30px;
-    border-bottom: 1px solid var(--card-border);
 }
 
 .exampl-flex:nth-child(3n) {
@@ -444,16 +442,28 @@ address {
     line-height: 2;     
     letter-spacing: 0.06em;
     color: var(--title-text-color);
-    margin-top: 20px;
+    margin: 0;
     margin-bottom: 4px;
 }
 
 .examples-text {
+    margin: 0;
     font-size: 16px;
     line-height: 1.88;
     color: var(--primary-text-color) 
 }
 
+.card-bottom {
+    border: 1px solid var(--btn-background);
+    border-top: none;
+    padding: 20px 24px;
+}
+
+.examples-img {
+    display: block;
+    max-height: 100%;
+    height: auto;
+}
 /* .nav-link:current
 {
     color: var(--accent-text-color);
