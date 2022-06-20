@@ -13,11 +13,12 @@ box-sizing: border-box;
     --title-text-color: rgb(33, 33, 33);
     --accent-text-color: rgba(33, 150, 243, 1);
     --background-color: #FFFFFF;
-    --btn-background: #f5f4fa;
+    --btn-background: rgb(245, 244, 250);
     --slogan-background: #2F303A;
     --footer-color: rgba(255, 255, 255, 0.6);
-    --header-border: #ECECEC;
-    --card-border:#EEEEEE;
+    --header-border: rgb(236, 236, 236);
+    --card-border:rgb(238, 238, 238);
+    --hero-overlay:rgba(47, 48, 58, 0.4);
 }
 /* задаю основний колір, фон, та шрифт  */
 body {
@@ -40,7 +41,7 @@ section {
     padding-top: 200px;
     padding-bottom: 200px;
     background-color:var(--slogan-background);
-    background-image:linear-gradient(to right, rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url(../images/backgroun-heads.jpg);
+    background-image:linear-gradient(to right, var(--hero-overlay),var(--hero-overlay)), url(../images/backgroun-heads.jpg);
     background-size: cover;
     background-position: center;
     max-width: 100%;
@@ -242,9 +243,23 @@ footer > .logo > span {
     
 }
 
+.flex>li::before{
+    display: block;
+    content:"";
+    /* width: 270px; */
+    height: 120px;
+    margin-bottom: 30px;
+    background-color: var(--btn-background);
+    border-radius:4px;
+    background-image: url(../images/astronaut.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+
 .flex>li{
     width: 270px;
-    height: 101px;
 }
 
 .flex>li+li{
