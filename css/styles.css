@@ -40,20 +40,25 @@ section {
     padding-top: 200px;
     padding-bottom: 200px;
     background-color:var(--slogan-background);
+    background-image:linear-gradient(to right, rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url(../images/backgroun-heads.jpg);
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    background-repeat: no-repeat;
 }
 
 .block {
     padding-top: 0px;
 }
 
- .container {
+.container {
     width: 1200px;
     /* background-color: rgb(197, 246, 246); */
     margin-left: auto;
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
- }
+}
 
 .slogan {
         text-align: center;
@@ -103,7 +108,6 @@ h1,h2,h3,ul{
     display: inline-block;
 
     color: var(--title-text-color);
-     
 }
 
 footer > .logo > span {
@@ -211,7 +215,7 @@ footer > .logo > span {
     line-height: 1.88;
     letter-spacing: 0.06em;
     border: none;
-          /* background-color: var(--accent-text-color);
+    /* background-color: var(--accent-text-color);
     color: var(--background-color); приміняємо другий клас active*/
 }
 /* main друга секція */
