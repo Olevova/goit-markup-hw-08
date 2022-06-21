@@ -37,6 +37,12 @@ section {
     padding-bottom: 94px;
 }
 
+.head-icon{
+    width: 16px;
+    height: 12px;
+
+}
+
 .hero{
     padding-top: 200px;
     padding-bottom: 200px;
@@ -251,12 +257,25 @@ footer > .logo > span {
     margin-bottom: 30px;
     background-color: var(--btn-background);
     border-radius:4px;
-    background-image: url(../images/astronaut.svg);
+    
     background-repeat: no-repeat;
     background-position: center;
-
+}
+.flex>li:nth-child(1)::before {
+    background-image: url(../images/antenna.svg);
 }
 
+.flex>li:nth-child(2)::before {
+    background-image: url(../images/clock.svg);
+}
+
+.flex>li:nth-child(3)::before {
+    background-image: url(../images/diagram.svg);
+}
+
+.flex>li:nth-child(4)::before {
+    background-image: url(../images/astronaut.svg);
+}
 
 .flex>li{
     width: 270px;
