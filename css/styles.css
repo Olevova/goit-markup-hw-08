@@ -36,11 +36,18 @@ section {
     padding-top: 94px;
     padding-bottom: 94px;
 }
-
-.head-icon{
+/* Іконки хедера */
+.head-icon-mail{
     width: 16px;
     height: 12px;
+    margin-right: 10px;
 
+}
+
+.head-icon-phone {
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
 }
 
 .hero{
@@ -187,10 +194,11 @@ footer > .logo > span {
 }
 
 .nav-link:hover,
-.nav-auth .link:hover,
 .nav-link:focus,
-.nav-auth .link:focus {
+.nav-auth.link:focus,
+.link:hover {
     color: var(--accent-text-color);
+    stroke : var(--accent-text-color);
 }
 
 
