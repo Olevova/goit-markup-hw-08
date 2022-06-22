@@ -36,19 +36,6 @@ section {
     padding-top: 94px;
     padding-bottom: 94px;
 }
-/* Іконки хедера */
-.head-icon-mail{
-    width: 16px;
-    height: 12px;
-    margin-right: 10px;
-
-}
-
-.head-icon-phone {
-    width: 10px;
-    height: 16px;
-    margin-right: 10px;
-}
 
 .hero{
     padding-top: 200px;
@@ -138,14 +125,17 @@ footer > .logo > span {
     align-items: center;
     margin-left: 93px;
 }
+
 /* задаємо відступи між елементами */
 .nav-menu>li:not(:last-child) {
     margin-right: 50px;
 }
+
 /* задаємо розмір логотипа */
 .nav>a {
     width: 145px;
 }
+
 /* робимо флекс бокси */
 .nav {
     display: flex;
@@ -193,10 +183,25 @@ footer > .logo > span {
     color: var(--accent-text-color);
 }
 
+/* Іконки хедера */
+.head-icon-mail {
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+    fill:currentColor;
+}
+
+.head-icon-phone {
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+    fill: currentColor;
+}
+/* Даємо фокус та ховер на телефон та меіл */
 .nav-link:hover,
 .nav-link:focus,
-.nav-auth.link:focus,
-.link:hover {
+.nav-auth .link:focus,
+.nav-auth .link:hover {
     color: var(--accent-text-color);
     stroke : var(--accent-text-color);
 }
@@ -271,6 +276,7 @@ footer > .logo > span {
 }
 .flex>li:nth-child(1)::before {
     background-image: url(../images/antenna.svg);
+    
 }
 
 .flex>li:nth-child(2)::before {
@@ -373,6 +379,43 @@ footer > .logo > span {
     max-height: 100%;
     height: auto;
 }
+.social-network {
+    display:flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 16px;
+    margin-bottom: 30px;
+    justify-content: center;
+    width: 206px;
+}
+
+.ic{
+    display:flex;
+    width: calc((100%-30px)/4);
+    height: 44px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-text-color);
+}
+
+.ic+.ic{
+margin-left: 10px;
+}
+
+.ic:hover,
+.ic:active {
+    background-color: var(--accent-text-color);
+}
+
+.ico {
+    fill:currentColor;
+}
+
+.ic:hover .ico {
+    fill: var(--background-color);
+}
+
 .team-flex>li+li{
     margin-left: 30px;
 }
