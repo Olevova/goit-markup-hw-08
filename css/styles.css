@@ -389,7 +389,7 @@ footer > .logo > span {
     width: 206px;
 }
 
-.ic{
+.icon-network{
     display:flex;
     width: calc((100%-30px)/4);
     height: 44px;
@@ -399,20 +399,20 @@ footer > .logo > span {
     color: var(--primary-text-color);
 }
 
-.ic+.ic{
+.icon-network+.icon-network{
 margin-left: 10px;
 }
 
-.ic:hover,
-.ic:active {
+.icon-network:hover,
+.icon-network:active {
     background-color: var(--accent-text-color);
 }
 
-.ico {
+.labe {
     fill:currentColor;
 }
 
-.ic:hover .ico {
+.icon-network:hover .labe {
     fill: var(--background-color);
 }
 
@@ -426,6 +426,10 @@ margin-left: 10px;
     padding-top: 60px;
     padding-bottom: 60px;
 }
+.footer-blocks{
+    display: inline-flex;
+}
+
 .footer .logo {
     display: inline-block;
     margin-bottom: 20px;
@@ -468,6 +472,17 @@ address {
     text-decoration-color: var(--accent-text-color);
     /* cursor: pointer; */
 }
+/* розмітка соціальних сіток футера */
+.social-network-footer {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 16px;
+    margin-bottom: 30px;
+    justify-content: center;
+    width: 206px;
+}
+
 /* Розмітка PORTFOLIO */
 /* header and footer - розмітка відповідає розмітці index.html */
 .examples>.container>h1 {
