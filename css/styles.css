@@ -19,6 +19,7 @@ box-sizing: border-box;
     --header-border: rgb(236, 236, 236);
     --card-border:rgb(238, 238, 238);
     --hero-overlay:rgba(47, 48, 58, 0.4);
+    --company-color:#AFB1B8;
 }
 /* задаю основний колір, фон, та шрифт  */
 body {
@@ -419,6 +420,33 @@ margin-left: 10px;
 .team-flex>li+li{
     margin-left: 30px;
 }
+/* розмітка пятої секції Наші клієнти */
+.client-block{
+    display: flex;
+    margin: -15px;
+}
+
+.client{
+    display: block;
+    width: calc((100%-150px)/6);
+    border: 1px solid var(--company-color);
+    margin: 15px;
+    text-align: center;
+    padding: 16px 32px;
+}
+
+.company{
+    fill:var(--company-color);
+}
+
+.client:hover{
+    border-color:var(--accent-text-color);
+    cursor: pointer; 
+}
+
+.client:hover .labe{
+    fill: var(--accent-text-color);
+}
 
 /* розмітка підвалу */
 .footer {
@@ -475,14 +503,34 @@ address {
 /* розмітка соціальних сіток футера */
 .social-network-footer {
     display: flex;
-    margin-left: auto;
+    margin-left: 70px;
     margin-right: auto;
-    margin-top: 16px;
-    margin-bottom: 30px;
-    justify-content: center;
+    margin-top: 12px;
+    margin-bottom: 100px;
+    justify-content: flex-start;
     width: 206px;
+    flex-wrap: wrap;
 }
 
+.foot {
+    justify-content:flex-start;
+    width: 44px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.infoot {
+    margin: 0 auto;
+    fill: #FFFFFF;
+}
+
+.network-title{
+    line-height: 1.14;
+    font-weight: 700;
+    text-align: left;
+    text-transform: uppercase;
+    color: var(--background-color);
+    margin-bottom: 20px;
+}
 /* Розмітка PORTFOLIO */
 /* header and footer - розмітка відповідає розмітці index.html */
 .examples>.container>h1 {
