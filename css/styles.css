@@ -400,11 +400,11 @@ footer > .logo > span {
     justify-content: center;
     align-items: center;
     
-    color: var(--primary-text-color);
+    color: rgba(175, 177, 184, 1);
 }
 
-.icon-network+.icon-network{
-margin-left: 10px;
+.icon-network.foot:not(:last-child){
+    margin-left: 10px;
 }
 
 .icon-network:hover,
@@ -414,7 +414,7 @@ margin-left: 10px;
 }
 
 .labe {
-    fill:rgba(175, 177, 184, 1);;
+    fill:rgba(175, 177, 184, 1);
 }
 
 .icon-network:hover .labe,
@@ -434,26 +434,35 @@ margin-left: 10px;
 .client{
     display: block;
     width: calc((100%-150px)/6);
+    height: 92px;
     border: 1px solid var(--company-color);
     margin: 15px;
     text-align: center;
-    padding: 16px 32px;
+    border-radius: 4px;
 }
 
-.company{
+.client-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    color: var(--company-color);
+}
+
+.company {
     fill:var(--company-color);
 }
 
-.client:hover,
-.client:focus{
-    border-color:var(--accent-text-color);
-    cursor: pointer; 
-}
 
-.client:hover .labe,
-.client:focus .labe{
+.client-icon:hover .company,
+.client-icon:focus .company,
+.client:hover,
+.client:focus{   
     fill: var(--accent-text-color);
-}
+    border-color: var(--accent-text-color);
+    cursor: pointer;
+    }
 
 /* розмітка підвалу */
 .footer {
@@ -463,6 +472,7 @@ margin-left: 10px;
 }
 .footer-blocks{
     display: inline-flex;
+    align-items: baseline
 }
 
 .footer .logo {
@@ -482,7 +492,7 @@ address {
 .footer-address {
     font-size: 14px;
     line-height: 1.71;
-    color:var(--background-color);
+    color:var(--background-color);  
     
 }
 
@@ -508,15 +518,22 @@ address {
     /* cursor: pointer; */
 }
 /* розмітка соціальних сіток футера */
+.social-network-footer>p {
+    margin: 0;
+}
+
 .social-network-footer {
-    display: flex;
+    display: block;
     margin-left: 70px;
-    margin-right: auto;
-    margin-top: 12px;
-    margin-bottom: 100px;
-    justify-content: flex-start;
-    width: 206px;
-    flex-wrap: wrap;
+}
+
+.footer-icon {
+    display: flex;
+    margin-top: 20px;
+}
+
+.footer-icon>li:not(:last-child) {
+    margin-right: 10px;
 }
 
 .foot {
