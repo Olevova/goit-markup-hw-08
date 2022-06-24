@@ -191,7 +191,7 @@ footer > .logo > span {
     width: 16px;
     height: 12px;
     margin-right: 10px;
-    fill:currentColor;
+    fill: currentColor;
 }
 
 .head-icon-phone {
@@ -203,12 +203,10 @@ footer > .logo > span {
 /* Даємо фокус та ховер на телефон та меіл */
 .nav-link:hover,
 .nav-link:focus,
-/* .nav-auth .link:focus,
-.nav-auth .link:hover, */
-.nav-auth :focus .link,
-.nav-auth :hover .link{
+.nav-auth-cont .link:focus,
+.nav-auth-cont .link:hover{
     color: var(--accent-text-color);
-    fill : var(--accent-text-color);
+    fill: var(--accent-text-color);
 }
 
 
@@ -394,13 +392,14 @@ footer > .logo > span {
     width: 206px;
 }
 
-.icon-network{
+.icon-network {
     display:flex;
     width: calc((100%-30px)/4);
     height: 44px;
     border-radius: 50%;
     justify-content: center;
     align-items: center;
+    
     color: var(--primary-text-color);
 }
 
@@ -409,15 +408,17 @@ margin-left: 10px;
 }
 
 .icon-network:hover,
-.icon-network:active {
+.icon-network:focus {
     background-color: var(--accent-text-color);
+    fill: var(--background-color);
 }
 
 .labe {
     fill:rgba(175, 177, 184, 1);;
 }
 
-.icon-network:hover .labe {
+.icon-network:hover .labe,
+.icon-network:focus .labe {
     fill: var(--background-color);
 }
 
