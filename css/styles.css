@@ -45,7 +45,8 @@ section {
     background-image:linear-gradient(to right, var(--hero-overlay),var(--hero-overlay)), url(../images/backgroun-heads.jpg);
     background-size: cover;
     background-position: center;
-    max-width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
     background-repeat: no-repeat;
 }
 
@@ -169,7 +170,8 @@ footer > .logo > span {
 }
 /* приміняємо стилі до пошти та телфону в шапці */
 .nav-auth .link {
-    display: inline-block;
+    display: flex;
+    align-items: center;
 
     font-family: 'Roboto';
     font-style: normal;
@@ -201,10 +203,12 @@ footer > .logo > span {
 /* Даємо фокус та ховер на телефон та меіл */
 .nav-link:hover,
 .nav-link:focus,
-.nav-auth .link:focus,
-.nav-auth .link:hover {
+/* .nav-auth .link:focus,
+.nav-auth .link:hover, */
+.nav-auth :focus .link,
+.nav-auth :hover .link{
     color: var(--accent-text-color);
-    stroke : var(--accent-text-color);
+    fill : var(--accent-text-color);
 }
 
 
@@ -360,7 +364,7 @@ footer > .logo > span {
     line-height: 1.18;
     text-align: center;
     margin: 0 auto;
-    margin-bottom: 30px;
+    margin-bottom: 16px;
 }
 
 .team-flex{
@@ -410,7 +414,7 @@ margin-left: 10px;
 }
 
 .labe {
-    fill:currentColor;
+    fill:rgba(175, 177, 184, 1);;
 }
 
 .icon-network:hover .labe {
