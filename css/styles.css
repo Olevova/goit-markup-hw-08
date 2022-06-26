@@ -126,6 +126,11 @@ footer > .logo > span {
     display:flex;
     align-items: center;
     margin-left: 93px;
+    /* outline: 2px dashed green; */
+    align-self: stretch;
+}
+.nav-menu>li{
+    height: 100%;
 }
 
 /* задаємо відступи між елементами */
@@ -141,7 +146,8 @@ footer > .logo > span {
 /* робимо флекс бокси */
 .nav {
     display: flex;
-    align-items: center;    
+    align-items: center;  
+    /* outline: 1px solid red;   */
 }
 
 .nav-auth {
@@ -159,6 +165,7 @@ footer > .logo > span {
     display: inline-block;
     padding-top: 25px;
     padding-bottom: 25px;
+    height: 100%;
 
     font-family: 'Roboto';
     font-style: normal;
@@ -181,10 +188,23 @@ footer > .logo > span {
     letter-spacing: 0.02em;
     color: var(--primary-text-color);
 }
-
+/* активна кнопка меню хедера */
 .nav-active {
+    position: relative;
     color: var(--accent-text-color);
 }
+
+.nav-active::after {
+    position: absolute;
+    content: "";
+    width:100%;
+    height: 4px;
+    background-color: var(--accent-text-color);
+    border-radius: 2px;
+    bottom: 0;
+    left: 0;
+}
+
 
 /* Іконки хедера */
 .head-icon-mail {
