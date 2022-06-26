@@ -53,7 +53,7 @@
         <h1 class="slogan-text">
             Эффективные решения для вашего бизнеса 
         </h1>
-        <button class="slogan-button active" type="button">Заказать услугу</button>
+        <button class="slogan-button active" data-modal-open type="button">Заказать услугу</button>
         </div>
     </section>
     <!--Секція друга Список Переваг-->
@@ -97,12 +97,15 @@
         <ul class="block-flex">
             <li class="block-img">
                 <a href="/"><img src="./images/img.jpg" alt="верстка" width="370" height="294" ></a>
+            <p class="work">Десктопные приложения</p>
             </li>
             <li class="block-img">
                 <a href="/"><img src="./images/img1.jpg" alt="разработка" width="370" height="294" ></a>
+            <p class="work">Мобильные приложения</p>
             </li>
             <li class="block-img">
                 <a href="/"><img src="./images/img2.jpg" alt="дизайн" width="370" height="294" ></a>
+            <p class="work">Дизайнерские решения</p>
             </li>
         </ul>
         </div>
@@ -313,9 +316,7 @@
                 </li>
                 <li>
                     <a class="icon-network foot" href="https://www.linkedin.com/">
-                    <svg class="labe infoot" width="20px" height="20px">
-                        <use href="/goit-markup-hw-04/images/symbol-defs.svg#linkedin"></use>
-                    </svg>
+
                     </a>
                 </li>
             </ul>
@@ -323,6 +324,16 @@
         </div>
         </div>
     </footer>
-    <script src="./js/modal.js"></script>
+    <!-- Створюємо бекдроп -->
+    <div class="backdrop is-hidden" data-modal>     
+    <div class="modal">
+        <button type="button" data-modal-close class="backdrop-button">
+        <svg class="cross" width="11px" height="11px">
+        <use href="../goit-markup-hw-05/images/symbol-defs.svg#icon-close-black"></use>
+        </svg>
+    </button>
+    </div>
+    </div>
+    <script src="../goit-markup-hw-05/js/modal.js"></script>
 </body>
 </html>

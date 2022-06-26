@@ -333,19 +333,40 @@ footer > .logo > span {
     margin-bottom: 0px;
     text-align: center;
     }
+
 .block-flex{
     display: flex;
+    
 
 }
 
 .block-img {
     width: 370px;
+    position: relative;
 }
 
 .block-img>a>img {
     display: block;
     max-height:100%;
     height: auto;
+}
+/* додаємо написи на картники */
+.work {
+    position: absolute;
+    width: 100%;
+    left:0;
+    bottom: 0;
+    text-align: center;
+    margin: 0;
+    padding: 27px 82px;
+    background-color: rgba(47, 48, 58, 0.8);
+
+    font-family: Roboto;
+    
+    font-weight: 700;
+    line-height: 1.17;
+    color: var(--background-color);
+
 }
 
 .block-flex>li:not(:last-child) {
@@ -356,7 +377,7 @@ footer > .logo > span {
 {
 
 } */
-/*  main четверта секція */
+/*  main четверта секція  */
 /* розмітка блоків */
 .block-title {
     margin-bottom: 50px;
@@ -718,3 +739,53 @@ address {
 {
     color: var(--accent-text-color);
 } */
+
+/* оформлення бекдропу */
+.backdrop{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);;
+}
+
+.backdrop.is-hidden{
+    opacity: 0;
+    pointer-events: none;
+
+}
+
+.modal{
+    position: absolute;
+    width: 528px;
+    height: 581px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+
+    background-color: var(--background-color);
+    box-shadow:0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+}
+.backdrop-button {
+    position: absolute;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    top:8px;
+    right:8px;
+
+}
+.cross{
+    position: absolute;
+    fill:black;
+
+}
