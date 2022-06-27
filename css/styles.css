@@ -99,6 +99,10 @@ h1,h2,h3,ul{
     font-size: 26px;
     line-height: 1.19;
     color: var(--accent-text-color);
+
+    /* transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
     
 }
 
@@ -174,6 +178,10 @@ footer > .logo > span {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--title-text-color);
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* приміняємо стилі до пошти та телфону в шапці */
 .nav-auth .link {
@@ -187,6 +195,10 @@ footer > .logo > span {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--primary-text-color);
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* активна кнопка меню хедера */
 .nav-active {
@@ -442,6 +454,9 @@ footer > .logo > span {
     align-items: center;
     
     color: rgba(175, 177, 184, 1);
+    transition-property: background-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-network.foot:not(:last-child){
