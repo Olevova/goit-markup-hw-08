@@ -20,6 +20,10 @@ box-sizing: border-box;
     --card-border:rgb(238, 238, 238);
     --hero-overlay:rgba(47, 48, 58, 0.4);
     --company-color:#AFB1B8;
+
+    --primary-cube: cubic-bezier(0.4, 0, 0.2, 1);
+
+
 }
 /* задаю основний колір, фон, та шрифт  */
 body {
@@ -29,6 +33,8 @@ body {
     font-size: 14px;
     letter-spacing: 0.03em;
 }
+
+
 header{
     border-bottom:1px solid var(--header-border) ;
 }
@@ -181,7 +187,7 @@ footer > .logo > span {
 
     transition-property: color;
     transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: var(--primary-cube);
 }
 /* приміняємо стилі до пошти та телфону в шапці */
 .nav-auth .link {
@@ -199,7 +205,7 @@ footer > .logo > span {
     /* transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); - це короткий запис */
     transition-property: color;
     transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: var(--primary-cube);
 }
 /* активна кнопка меню хедера */
 .nav-active {
@@ -455,8 +461,8 @@ footer > .logo > span {
     align-items: center;
     
     color: rgba(175, 177, 184, 1);
-    transition: color 2500ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 2500ms var(--primary-cube),
+    background-color 250ms var(--primary-cube);
 
 }
 
@@ -472,7 +478,7 @@ footer > .logo > span {
 
 .labe {
     fill:rgba(175, 177, 184, 1);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms var(--primary-cube);
 
 }
 
@@ -498,7 +504,7 @@ footer > .logo > span {
     margin: 15px;
     text-align: center;
     border-radius: 4px;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms var(--primary-cube);
 }
 
 .client-icon{
@@ -512,7 +518,7 @@ footer > .logo > span {
 
 .company {
     fill:var(--company-color);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms var(--primary-cube);
 }
 
 
@@ -644,9 +650,9 @@ address {
     border-width: 0;
     color:var(--title-text-color);
     
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms var(--primary-cube),
+    background-color 250ms var(--primary-cube),
+    box-shadow 250ms var(--primary-cube);
 }
 
 .examples-menu>li:not(:last-child){
@@ -669,7 +675,7 @@ address {
     display: flex;
     flex-wrap: wrap;
 
-    transition:box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transition:box-shadow 250ms var(--primary-cube),
 }
 
 .exampl-flex {
@@ -726,17 +732,19 @@ address {
 .description{
     display:flex;
     position: relative;
-    overflow: hidden; 
+    overflow: hidden;
 }
-.description-text{
-    display: block;
+.description-text {
+    display: inline-block;
     text-align: center;
-    margin: 0 auto;
+    margin: 0;
+    padding-top: 63px;
+    padding-left: 23px;
+    padding-right: 23px;
     position: absolute;
-    top: 100%;
-    /* transform: translate(-50%, -50%); */
-    width: 322px;
-    height: 168px;
+    transform: translateY(100%);
+    width: 100%;
+    height: 100%;
     
     font-family: 'Roboto';
     font-style: normal;
@@ -744,65 +752,89 @@ address {
     font-size: 18px;
     line-height: 1.56;
     color: var(--background-color);
+    background-color: rgba(33, 150, 243, 0.9);
     opacity: 1;
-    transition: transform 1500ms cubic-bezier(0.4, 0, 0.2, 1); 
+    transition: transform 250ms var(--primary-cube); 
 }
 
-.description::before{
-    content:" ";
-    top:100%;
+/* .description::before{
+    content:"Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.";
+    transform: translateY(100%);
     width: 100%;
     height: 100%;
     background-color: rgba(33, 150, 243, 0.9);
+    display: block;
+    padding: 63px 24px;
+
     position: absolute;
     opacity: 1;
     transition: transform 1500ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    color: var(--background-color); */
 
-.exampl-flex:hover ::before {
+
+.exampl-flex:hover .description-text,
+.exampl-flex:focus .description-text {
     opacity: 1;
-    transform:translate(0, -100%);
+    transform: translateY(0%);
 }
-.exampl-flex:hover .description-text{
+/* .exampl-flex:hover .description-text{
     opacity: 1;
     bottom:-100%;
-    transform: translate(0,-150%);
-}
+    transform: translate(0,-150%); 
 /* .nav-link:current
 {
     color: var(--accent-text-color);
 } */
 
 /* оформлення бекдропу */
-.backdrop{
+.backdrop {
     position: fixed;
-    top:0;
-    left: 0;
+    top: 50%;
+    left: 50%;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms cubic-bezier(.15, .59, .76, .25), opacity 250ms cubic-bezier(.15, .59, .76, .25);
+    /* animation-name: backdrop-animation;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+
 }
 
-.backdrop.is-hidden{
+.backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
-
+    transform: translate(-50%, -50%) scale(1.2);
 }
 
-.modal{
+
+.modal {
     position: absolute;
     width: 528px;
     height: 581px;
     top:50%;
     left:50%;
     transform: translate(-50%, -50%);
-
+    
     background-color: var(--background-color);
     box-shadow:0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 
     0px 1px 3px 0px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
-}
+    }
+
+/* .modal:hover{
+    transform: translate(-50%, -50%) rotate(0deg);
+} */
 .backdrop-button {
     position: absolute;
     display: flex;
@@ -817,8 +849,23 @@ address {
     right:8px;
 
 }
-.cross{
+.cross {
     position: absolute;
     fill:black;
 
+}
+
+/* анімація */
+@keyframes backdrop-animation {
+    0% {
+        transform: scale(1);
+    }
+
+    35% {
+        border-radius: 50%;
+    }
+
+    100% {
+        transform: scale (0.5);
+    }
 }
