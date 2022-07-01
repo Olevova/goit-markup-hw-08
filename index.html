@@ -11,6 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet">
     <!-- нормалізація -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
@@ -323,12 +326,17 @@
                 </li>
             </ul>
         </div>
+        <div class="mailing">
+            <p class="network-title moto">Подпишитесь на рассылку</p>
         <div class="form-footer">
-                <form action="">
+                <form action="" class="form-footer">
                 <label name="mail" for="mail"></label>
-                <input type="mail" id="mail">
-                <button></button>
+                <input class="footer-input" type="mail" id="mail" placeholder="E-mail">
+                <button class="form-button" type="submit"><span>Подписаться</span><svg class="form-icon" width="24" height="24">
+                    <use href="/goit-markup-hw-06/images/symbol-defs.svg#icon-jet"></use>
+                </svg></button>
                 </form>
+            </div>
             </div>
         </div>
         </div>

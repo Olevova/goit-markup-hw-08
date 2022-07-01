@@ -511,7 +511,7 @@ footer > .logo > span {
   height: 100%;
   width: 100%;
   color: var(--company-color);
-  transition: border-color 250ms var(--primary-cube), color 250ms var(--primary-cube);
+  transition: border-color 250ms var(--primary-cube), fill 250ms var(--primary-cube);
 }
 
 .company {
@@ -617,6 +617,56 @@ address {
   color: var(--background-color);
   margin-bottom: 20px;
 }
+.mailing {
+  margin-left: 93px;
+}
+.form-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  background-color: var(--accent-text-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  padding: none;
+}
+
+.form-footer {
+  display: flex;
+  width: 570px;
+}
+
+.form-button > span {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-right: 10px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  color: var(--background-color);
+}
+
+.form-button > svg {
+  fill: var(--background-color);
+}
+
+.footer-input {
+  background-color: var(--slogan-bacground);
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  box-shadow: drop-shadow(rgba(0, 0, 0, 0.15));
+  margin-right: 12px;
+}
+
 /* Розмітка PORTFOLIO */
 /* header and footer - розмітка відповідає розмітці index.html */
 .examples > .container > h1 {
