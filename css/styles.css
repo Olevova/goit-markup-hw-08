@@ -912,6 +912,8 @@ address {
 }
 
 .form-part {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
@@ -957,6 +959,12 @@ address {
   letter-spacing: 0.03em;
 
   color: var(--title-text-color);
+}
+
+.icon-form {
+  position: absolute;
+  top: 50%;
+  left: 15px;
 }
 
 /* анімація */
