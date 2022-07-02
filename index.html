@@ -348,7 +348,31 @@
         <svg class="cross" width="11px" height="11px">
         <use href="../goit-markup-hw-06/images/symbol-defs.svg#icon-close-black"></use>
         </svg>
-    </button>
+        </button>
+        <form action="" class="backdrop-form" name="modal-form">
+            <p class="form-title">Оставьте свои данные, мы вам перезвоним</p>
+            <div class="form-part">
+            <label for="text">Имя</label>
+            <input type="text" name="text" id="text">
+            </div>
+            <div class="form-part">
+            <label for="tel">Телефон</label>
+            <input type="tel" name="tel" id="tel">
+            </div>
+            <div class="form-part">
+            <label for="mail">Почта</label>
+            <input type="mail" name="mail" id="mail">
+            </div>
+            <div class="form-part">
+            <label for="feedback">Комментарий</label>
+            <textarea name="feedback" id="feedback" rows="5" placeholder="Введите текст"></textarea>         
+            </div>
+            <div class="form-part checkbox">
+            <label for="checkbox"></label>
+            <input type="checkbox" name="check" id="checkbox">Соглашаюсь с рассылкой и принимаю<a href="#"> Условия договора</a>
+            </div>
+            <button type="submit">Отправить</button>
+        </form>
     </div>
     </div>
     <script src="../goit-markup-hw-06/js/modal.js"></script>

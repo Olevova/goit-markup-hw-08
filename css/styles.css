@@ -627,10 +627,10 @@ address {
   width: 200px;
   height: 50px;
   background-color: var(--accent-text-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
   padding: none;
+  box-shadow: 0px 4px 4px 0px #00000026;
 }
 
 .form-footer {
@@ -663,7 +663,7 @@ address {
   padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
-  box-shadow: drop-shadow(rgba(0, 0, 0, 0.15));
+  box-shadow: 0px 4px 4px 0px #00000026;
   margin-right: 12px;
 }
 
@@ -857,6 +857,7 @@ address {
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  /* visibility: hidden; */
   transform: translate(-50%, -50%) scale(1.2);
 }
 
@@ -901,6 +902,61 @@ address {
 .cross {
   position: absolute;
   fill: black;
+}
+
+.backdrop-form {
+  display: flex;
+  margin: 40px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-part {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form-part > input {
+  width: 448px;
+  height: 40px;
+  border: 1px solid var(--title-text-color);
+  border-radius: 4px;
+  margin-top: 4px;
+}
+
+.form-part > textarea[name='feedback'] {
+  width: 448px;
+  height: 120px;
+  margin-bottom: 20px;
+  margin-top: 4px;
+}
+
+.form-part > input[type='checkbox'] {
+  width: 16px;
+  height: 15px;
+}
+
+.checkbox {
+  display: flex;
+  width: 423px;
+  height: 24px;
+  flex-direction: row;
+  align-items: center;
+}
+
+.form-title {
+  margin: 0;
+  margin-bottom: 12px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--title-text-color);
 }
 
 /* анімація */
