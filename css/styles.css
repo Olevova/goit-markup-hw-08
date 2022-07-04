@@ -9,7 +9,7 @@ html {
 }
 /* змінні основні */
 :root {
-  --primary-text-color: rgb(117, 117, 117);
+  --primary-text-color: #757575;
   --title-text-color: rgb(33, 33, 33);
   --accent-text-color: rgba(33, 150, 243, 1);
   --background-color: #ffffff;
@@ -930,11 +930,25 @@ address {
   padding-left: 40px;
 }
 
-.form-part:hover,
-.form-part:hover .input {
+/* .form-part:focus,
+.form-part:focus .put {
   fill: var(--accent-text-color);
   cursor: pointer;
   border-color: var(--accent-text-color);
+} */
+
+.form-part:focus-within {
+  fill: var(--accent-text-color);
+  cursor: pointer;
+  border-color: var(--accent-text-color);
+}
+.form-part:focus-within .put {
+  border-top-color: var(--accent-text-color);
+}
+
+.backdrop-button:hover .cross,
+.backdrop-button:focus .cross {
+  fill: var(--accent-text-color);
 }
 
 .back-but {
@@ -969,7 +983,15 @@ address {
   width: 423px;
   height: 24px;
   flex-direction: row;
-  align-items: center;
+  align-items: stretch;
+  justify-content: space-between;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--primary-text-color);
 }
 
 .form-title {
@@ -981,9 +1003,20 @@ address {
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
-  letter-spacing: 0.03em;
 
   color: var(--title-text-color);
+}
+
+.icon-check {
+  position: absolute;
+  left: 1.5%;
+  bottom: 40%;
+  transition: transform(-50% -50%);
+}
+
+.checklink {
+  text-decoration: underline;
+  text-decoration-color: var(--accent-text-color);
 }
 
 .icon-form {
