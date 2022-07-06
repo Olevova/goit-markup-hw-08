@@ -10,7 +10,7 @@ html {
 /* змінні основні */
 :root {
   --primary-text-color: #757575;
-  --title-text-color: #212121;
+  --title-text-color: rgb(33, 33, 33);
   --accent-text-color: rgba(33, 150, 243, 1);
   --background-color: #ffffff;
   --btn-background: rgb(245, 244, 250);
@@ -539,6 +539,8 @@ footer > .logo > span {
 .footer-blocks {
   display: inline-flex;
   align-items: baseline;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .footer .logo {
@@ -588,7 +590,6 @@ address {
 
 .social-network-footer {
   display: block;
-  margin-left: 70px;
 }
 
 .footer-icon {
@@ -619,9 +620,7 @@ address {
   color: var(--background-color);
   margin-bottom: 20px;
 }
-.mailing {
-  margin-left: 93px;
-}
+
 .form-button {
   display: flex;
   justify-content: center;
@@ -651,6 +650,7 @@ address {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
+  letter-spacing: 0.06em;
   color: var(--background-color);
 }
 
@@ -660,6 +660,7 @@ address {
 
 .footer-input {
   background-color: var(--slogan-bacground);
+  color: var(--background-color);
   width: 358px;
   height: 50px;
   padding: 15px 16px;
@@ -906,6 +907,8 @@ address {
   position: absolute;
   fill: black;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 18px;
+  height: 18px;
 }
 
 .backdrop-form {
@@ -925,10 +928,20 @@ address {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.form-part > label {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+
+  letter-spacing: 0.01em;
+}
+
 .form-part > input {
   width: 448px;
   height: 40px;
-  border: 1px solid var(--title-text-color);
+  border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   margin-top: 4px;
   padding-left: 40px;
@@ -969,8 +982,11 @@ address {
   height: 120px;
   margin-bottom: 20px;
   margin-top: 4px;
+  padding: 12px 16px;
   resize: none;
   outline: transparent;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
 }
 
 .form-part > input[type='checkbox'] {
@@ -991,6 +1007,7 @@ address {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 30px;
 
   font-family: 'Roboto';
   font-style: normal;
@@ -1032,7 +1049,7 @@ address {
 
 .checklink {
   text-decoration: underline;
-  text-decoration-color: var(--accent-text-color);
+  color: var(--accent-text-color);
 }
 
 .checking-icon:checked + .icon-check,
