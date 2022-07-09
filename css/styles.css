@@ -128,6 +128,11 @@ footer > .logo > span {
   color: var(--background-color);
 }
 /* загальний клас для флекса */
+.header__container {
+  display: flex;
+  align-items: center;
+}
+
 .flex {
   display: flex;
   align-items: center;
@@ -150,12 +155,12 @@ footer > .logo > span {
 }
 
 /* задаємо розмір логотипа */
-.nav > a {
+.header__nav > a {
   width: 145px;
 }
 
 /* робимо флекс бокси */
-.nav {
+.header__nav {
   display: flex;
   align-items: center;
   /* outline: 1px solid red;   */

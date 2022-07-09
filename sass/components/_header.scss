@@ -1,0 +1,27 @@
+header {
+  border-bottom: 1px solid $header-border;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+}
+
+.header__nav-menu{
+  display: flex;
+  align-items: center;
+  margin-left: 93px;
+    /* outline: 2px dashed green; */
+  align-self: stretch;
+}
+
+.header__nav {
+  height: 100%;
+  &:not(:last-child){
+    margin-right: 50px;
+  }
+}
+
+.header__nav-link {
+
+}

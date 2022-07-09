@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="Home work" content="Домашне завдання по HTML + CSS №1" />
+    <title>Home work 1</title>
+    <!-- підключення шрифтів -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- нормалізація -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./sass/main.css" />
+  </head>
+  <body>
+    <!--Заголовок сайту що містить посилання на головну сторінку, навігацію з списком, 
+        та список з телефоном та електроною поштою-->
+    <header class="header">
+      <div class="container">
+        <div class="header__container">
+          <nav class="header__nav">
+            <a class="logo" href="/">Web<span class="logo__secondpart">Studio</span></a>
+            <ul class="header__nav-menu">
+              <li class="header__nav">
+                <a class="header__nav-link nav-active" href="./index.html">Студия</a>
+              </li>
+              <li class="header__nav">
+                <a class="header__nav-link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="header__nav"><a class="header__nav-link" href="#">Контакты</a></li>
+            </ul>
+          </nav>
+          <ul class="header__nav-auth">
+            <li class="header__nav-auth-cont">
+              <a class="header__auth-link" href="mailto:info@devstudio.com">
+                <svg class="header-icon">
+                  <use href="./images/symbol-defs.svg#mail"></use></svg
+                >info@devstudio.com</a
+              >
+            </li>
+            <li class="header__nav-auth-cont">
+              <a class="header__auth-link" href="tel:+380961111111">
+                <svg class="header-icon">
+                  <use href="./images//symbol-defs.svg#phone"></use></svg
+                >+38 096 111 11 11</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>

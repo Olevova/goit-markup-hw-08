@@ -26,28 +26,32 @@
   <body>
     <!--Заголовок сайту що містить посилання на головну сторінку, навігацію з списком, 
         та список з телефоном та електроною поштою-->
-    <header>
+    <header class="header">
       <div class="container">
-        <div class="flex">
-          <nav class="nav">
-            <a class="logo" href="/">Web<span>Studio</span></a>
-            <ul class="nav-menu">
-              <li><a class="nav-link nav-active" href="./index.html">Студия</a></li>
-              <li><a class="nav-link" href="./portfolio.html">Портфолио</a></li>
-              <li><a class="nav-link" href="#">Контакты</a></li>
+        <div class="header__container">
+          <nav class="header__nav">
+            <a class="logo" href="/">Web<span class="logo__secondpart">Studio</span></a>
+            <ul class="header__nav-menu">
+              <li class="header__nav">
+                <a class="header__nav-link nav-active" href="./index.html">Студия</a>
+              </li>
+              <li class="header__nav">
+                <a class="header__nav-link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="header__nav"><a class="header__nav-link" href="#">Контакты</a></li>
             </ul>
           </nav>
-          <ul class="nav-auth">
-            <li class="nav-auth-cont">
-              <a class="link" href="mailto:info@devstudio.com">
-                <svg class="head-icon-mail">
+          <ul class="header__nav-auth">
+            <li class="header__nav-auth-cont">
+              <a class="header__auth-link" href="mailto:info@devstudio.com">
+                <svg class="header-icon">
                   <use href="./images/symbol-defs.svg#mail"></use></svg
                 >info@devstudio.com</a
               >
             </li>
-            <li class="nav-auth-cont">
-              <a class="link" href="tel:+380961111111">
-                <svg class="head-icon-phone">
+            <li class="header__nav-auth-cont">
+              <a class="header__auth-link" href="tel:+380961111111">
+                <svg class="header-icon">
                   <use href="./images//symbol-defs.svg#phone"></use></svg
                 >+38 096 111 11 11</a
               >
@@ -390,7 +394,8 @@
           <p class="form-title">Оставьте свои данные, мы вам перезвоним</p>
           <!-- Можна тегом Стронг  -->
           <div class="form-part">
-            <label for="text">Имя</label>
+            <label for="text">Имя</label
+            ><!--  -->
             <input class="put" type="text" name="text" id="text" />
             <svg class="icon-form" width="18" height="18">
               <use href="./images/symbol-defs.svg#icon-man"></use>
