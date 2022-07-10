@@ -21,19 +21,19 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./sass/main.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <!--Заголовок сайту що містить посилання на головну сторінку, навігацію з списком, 
         та список з телефоном та електроною поштою-->
     <header class="header">
       <div class="container">
-        <div class="header__container">
+        <div class="header__wrapper">
           <nav class="header__nav">
             <a class="logo" href="/">Web<span class="logo__secondpart">Studio</span></a>
             <ul class="header__nav-menu">
               <li class="header__nav">
-                <a class="header__nav-link nav-active" href="./index.html">Студия</a>
+                <a class="header__nav-link header__nav-link--active" href="./index.html">Студия</a>
               </li>
               <li class="header__nav">
                 <a class="header__nav-link" href="./portfolio.html">Портфолио</a>
@@ -44,14 +44,14 @@
           <ul class="header__nav-auth">
             <li class="header__nav-auth-cont">
               <a class="header__auth-link" href="mailto:info@devstudio.com">
-                <svg class="header-icon">
+                <svg class="header__auth-icon header__auth-icon--mail">
                   <use href="./images/symbol-defs.svg#mail"></use></svg
                 >info@devstudio.com</a
               >
             </li>
             <li class="header__nav-auth-cont">
               <a class="header__auth-link" href="tel:+380961111111">
-                <svg class="header-icon">
+                <svg class="header__auth-icon header__auth-icon--phone">
                   <use href="./images//symbol-defs.svg#phone"></use></svg
                 >+38 096 111 11 11</a
               >
