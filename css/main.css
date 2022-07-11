@@ -378,4 +378,113 @@ header {
   line-height: 1.17;
   color: #ffffff;
   text-transform: uppercase;
+}
+
+.team {
+  background-color: rgb(245, 244, 250);
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.team__title {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  color: rgb(33, 33, 33);
+  margin-top: 0px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.team__text {
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 16px;
+}
+
+.team__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: rgb(245, 244, 250);
+}
+
+.team__block {
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  background-color: #ffffff;
+}
+.team__block + .team__block {
+  margin-left: 30px;
+}
+
+.team__image {
+  margin-bottom: 30px;
+  display: block;
+  max-height: 100%;
+  height: auto;
+}
+
+.team__name {
+  margin-bottom: 10px;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  color: rgb(33, 33, 33);
+  text-align: center;
+}
+
+.network {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 16px;
+  margin-bottom: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 206px;
+}
+
+.network__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgb(175, 177, 184);
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.network__icon:not(:last-child) {
+  margin-right: 10px;
+}
+.network__icon:hover, .network__icon:focus {
+  background-color: rgb(33, 150, 243);
+  fill: #ffffff;
+}
+.network__icon:hover .network__labe, .network__icon:focus .network__labe {
+  fill: #ffffff;
+}
+
+.icon-network.foot:not(:last-child) {
+  margin-left: 10px;
+}
+
+.network__labe {
+  fill: rgb(175, 177, 184);
 }/*# sourceMappingURL=main.css.map */
