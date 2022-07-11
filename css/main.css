@@ -317,4 +317,67 @@ header {
 }
 .advantage__card:nth-child(4)::before {
   background-image: url(../images/astronaut.svg);
+}
+
+.direction {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  padding-top: 0px;
+}
+
+.direction__title {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  color: rgb(33, 33, 33);
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.direction__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.direction__card {
+  width: 370px;
+  position: relative;
+}
+.direction__card:not(:last-child) {
+  margin-right: 30px;
+}
+
+.direction__link > img {
+  display: block;
+  max-height: 100%;
+  height: auto;
+}
+
+/* додаємо написи на картники */
+.direction__description {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  margin: 0;
+  background-color: rgba(47, 48, 58, 0.8);
+  font-family: Roboto;
+  font-weight: 700;
+  line-height: 1.17;
+  color: #ffffff;
+  text-transform: uppercase;
 }/*# sourceMappingURL=main.css.map */
