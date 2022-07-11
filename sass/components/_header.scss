@@ -2,11 +2,6 @@ header {
   border-bottom: 1px solid $header-border;
 }
 
-.header__wrapper {
-  display: flex;
-  align-items: center;
-}
-
 .header__nav {
   @include centerFlex();
 }

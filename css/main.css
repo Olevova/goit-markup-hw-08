@@ -40,6 +40,15 @@ ul {
   padding-left: 0px;
 }
 
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .logo {
   padding-top: 24px;
   padding-bottom: 25px;
@@ -67,15 +76,6 @@ ul {
 
 header {
   border-bottom: 1px solid rgb(236, 236, 236);
-}
-
-.header__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .header__nav {
@@ -216,7 +216,7 @@ header {
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
-  background-color: var(--slogan-background);
+  background-color: #2f303a;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/backgroun-heads.jpg);
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/backgroun-heads.jpg);
   background-size: cover;
@@ -224,6 +224,8 @@ header {
   max-width: 1600px;
   margin: 0 auto;
   background-repeat: no-repeat;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .sloganhero__text {
@@ -260,4 +262,59 @@ header {
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   color: #ffffff;
+}
+
+.advantage {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.advantage__card-title {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: rgb(33, 33, 33);
+}
+
+/* розмітка тексту переваг */
+.advantage__paragraf {
+  font-size: 14px;
+  line-height: 1.71;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.advantage__title {
+  display: none;
+  text-align: center;
+}
+
+.advantage__card::before {
+  display: block;
+  content: "";
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: rgb(245, 244, 250);
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.advantage__card + .advantage__card {
+  margin-left: 30px;
+}
+.advantage__card:nth-child(1)::before {
+  background-image: url(../images/antenna.svg);
+}
+.advantage__card:nth-child(2)::before {
+  background-image: url(../images/clock.svg);
+}
+.advantage__card:nth-child(3)::before {
+  background-image: url(../images/diagram.svg);
+}
+.advantage__card:nth-child(4)::before {
+  background-image: url(../images/astronaut.svg);
 }/*# sourceMappingURL=main.css.map */

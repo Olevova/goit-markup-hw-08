@@ -2,7 +2,7 @@
     text-align: center;
     padding-top: 200px;
     padding-bottom: 200px;
-    background-color: var(--slogan-background);
+    background-color: $slogan-background;
     background-image: linear-gradient(to right, $hero-overlay, $hero-overlay),
         url(../images/backgroun-heads.jpg);
     background-size: cover;
@@ -10,6 +10,7 @@
     max-width: 1600px;
     margin: 0 auto;
     background-repeat: no-repeat;
+    @include markup();
 }
 
 .sloganhero__text {
