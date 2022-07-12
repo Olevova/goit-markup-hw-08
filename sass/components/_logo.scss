@@ -15,3 +15,13 @@
 
   color: $title-text-color;
 }
+
+.logo--footer {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding-top: 0;
+  padding-bottom: 0;
+  & >span{
+      color: $background-color;
+    };
+}
