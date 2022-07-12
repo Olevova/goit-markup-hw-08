@@ -61,7 +61,7 @@
 .network__list {
     display: flex;
     margin-top: 20px;
-    &li:not(:last-child) {
+    &>li:not(:last-child) {
             margin-right: 10px;
         }
 }

@@ -58,6 +58,7 @@ ul {
   font-size: 26px;
   line-height: 1.19;
   color: rgb(33, 150, 243);
+  width: 145px;
 }
 
 .logo__secondpart {
@@ -522,7 +523,7 @@ header {
   display: flex;
   margin-top: 20px;
 }
-.network__listli:not(:last-child) {
+.network__list > li:not(:last-child) {
   margin-right: 10px;
 }
 
