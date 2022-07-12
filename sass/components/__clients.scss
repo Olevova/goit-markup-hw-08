@@ -1,0 +1,50 @@
+.clients {
+    @include markup();
+}
+
+.clients__title {
+   @include title();
+}
+
+.client__block {
+    display: flex;
+    margin: -15px;
+}
+
+.clients__card {
+    display: block;
+    width: 170px;
+    height: 92px;
+    /* border: 1px solid var(--company-color); */
+    margin: 15px;
+    text-align: center;
+    /* border-radius: 4px; */
+}
+
+.clients__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    color: $company-color;
+    transition: border-color 250ms $primary-cube;
+    border-radius: 4px;
+    border: 1px solid $company-color;
+        &:hover .clients__labe,
+        &:focus .clients__labe,
+        &:hover,
+        &:focus{
+            fill: $accent-text-color;
+                border-color: $accent-text-color;
+                cursor: pointer;
+        } ;
+        
+
+
+}
+
+.clients__labe {
+    fill: $company-color;
+    transition: fill 250ms $primary-cube;
+}

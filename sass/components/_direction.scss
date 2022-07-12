@@ -4,15 +4,7 @@
 }
 
 .direction__title {
-    font-family: 'Roboto';
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
-    color: $title-text-color;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    text-align: center;
-    margin-bottom: 50px;
+    @include title();
 }
 
 .direction__block {

@@ -4,14 +4,7 @@
 }
 
 .team__title {
-  font-family: 'Roboto';
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  color: $title-text-color;
-  margin-top: 0px;
-  margin-bottom: 50px;
-  text-align: center;
+  @include title();
 }
 
 .team__text {
