@@ -393,8 +393,8 @@
     <!-- Створюємо бекдроп -->
     <div class="backdrop backdrop--is-hidden" data-modal>
       <div class="backdrop__modal">
-        <button type="backdrop__modal-button" data-modal-close class="backdrop-button">
-          <svg class="backdrop__modal_cross-icon" width="11" height="11">
+        <button type="button" data-modal-close class="backdrop__modal-button">
+          <svg class="backdrop__modal-cross-icon" width="11" height="11">
             <use href="./images/symbol-defs.svg#icon-close-black"></use>
           </svg>
         </button>
@@ -440,7 +440,9 @@
             ></span>
             Соглашаюсь с рассылкой и принимаю<a class="checklink" href="#"> Условия договора</a>
           </label>
-          <button class="form-button back-but" type="submit">Отправить</button>
+          <button class="footer__form-button .footer__form-button--back-but" type="submit">
+            Отправить
+          </button>
         </form>
       </div>
     </div>

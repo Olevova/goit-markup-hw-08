@@ -905,4 +905,259 @@ address {
 /* .nav-link:current
 {
     color: var(--accent-text-color);
-} *//*# sourceMappingURL=main.css.map */
+} */
+.backdrop {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  -webkit-transition: opacity 250ms cubic-bezier(0.15, 0.59, 0.76, 0.25), -webkit-transform 250ms cubic-bezier(0.15, 0.59, 0.76, 0.25);
+  transition: opacity 250ms cubic-bezier(0.15, 0.59, 0.76, 0.25), -webkit-transform 250ms cubic-bezier(0.15, 0.59, 0.76, 0.25);
+  transition: transform 250ms cubic-bezier(0.15, 0.59, 0.76, 0.25), opacity 250ms cubic-bezier(0.15, 0.59, 0.76, 0.25);
+  transition: transform 250ms cubic-bezier(0.15, 0.59, 0.76, 0.25), opacity 250ms cubic-bezier(0.15, 0.59, 0.76, 0.25), -webkit-transform 250ms cubic-bezier(0.15, 0.59, 0.76, 0.25);
+  /* animation-name: backdrop-animation;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+}
+
+.backdrop--is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  /* visibility: hidden; */
+  -webkit-transform: translate(-50%, -50%) scale(1.2);
+          transform: translate(-50%, -50%) scale(1.2);
+}
+
+.backdrop__modal {
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate(-50%, -50%) rotate(0deg);
+          transform: translate(-50%, -50%) rotate(0deg);
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(360deg);
+          transform: translate(-50%, -50%) rotate(360deg);
+  padding: 40px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.15, 0.59, 0.76, 0.25) 250ms;
+  transition: -webkit-transform 250ms cubic-bezier(0.15, 0.59, 0.76, 0.25) 250ms;
+  transition: transform 250ms cubic-bezier(0.15, 0.59, 0.76, 0.25) 250ms;
+  transition: transform 250ms cubic-bezier(0.15, 0.59, 0.76, 0.25) 250ms, -webkit-transform 250ms cubic-bezier(0.15, 0.59, 0.76, 0.25) 250ms;
+}
+
+.backdrop__modal-button {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  top: 8px;
+  right: 8px;
+}
+
+.backdrop__modal-cross-icon {
+  position: absolute;
+  fill: black;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 18px;
+  height: 18px;
+}
+
+.backdrop__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.backdrop__form-part {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 10px;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop__form-part:focus-within {
+  fill: rgb(33, 150, 243);
+  cursor: pointer;
+  border-color: rgb(33, 150, 243);
+}
+.backdrop__form-part:focus-within .put {
+  border-color: rgb(33, 150, 243);
+}
+
+.backdrop__form-part > labe {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+}
+
+.backdrop__form-put {
+  width: 448px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-top: 4px;
+  padding-left: 40px;
+  outline: transparent;
+  -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop-button:hover .cross,
+.backdrop-button:focus .cross {
+  fill: var(--accent-text-color);
+}
+
+.back-but {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--background-color);
+}
+
+.form-part > textarea[name=feedback] {
+  width: 448px;
+  height: 120px;
+  margin-bottom: 20px;
+  margin-top: 4px;
+  padding: 12px 16px;
+  resize: none;
+  outline: transparent;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.form-part > input[type=checkbox] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clear: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 423px;
+  height: 24px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 30px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--primary-text-color);
+}
+
+.form-title {
+  margin: 0;
+  margin-bottom: 12px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: var(--title-text-color);
+}
+
+.icon-check {
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--title-text-color);
+  border-radius: 4px;
+}
+
+.app-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  fill: transparent;
+}
+
+.checklink {
+  text-decoration: underline;
+  color: var(--accent-text-color);
+}
+
+.checking-icon:checked + .icon-check,
+.checking-icon:checked + .icon-check > .app-icon {
+  background-color: var(--accent-text-color);
+  border: transparent;
+  fill: #ffffff;
+  border-radius: 4px;
+}
+
+.icon-form {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+}/*# sourceMappingURL=main.css.map */
