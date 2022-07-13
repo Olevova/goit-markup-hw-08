@@ -390,5 +390,60 @@
         </div>
       </div>
     </footer>
+    <!-- Створюємо бекдроп -->
+    <div class="backdrop backdrop--is-hidden" data-modal>
+      <div class="backdrop__modal">
+        <button type="backdrop__modal-button" data-modal-close class="backdrop-button">
+          <svg class="backdrop__modal_cross-icon" width="11" height="11">
+            <use href="./images/symbol-defs.svg#icon-close-black"></use>
+          </svg>
+        </button>
+        <form action="#" class="backdrop__form" name="modal-form">
+          <p class="backdrop__title">Оставьте свои данные, мы вам перезвоним</p>
+          <!-- Можна тегом Стронг  -->
+          <div class="backdrop__form-part">
+            <label for="text">Имя</label>
+            <input class="backdrop__form-put" type="text" name="text" id="text" />
+            <svg class="icon-form" width="18" height="18">
+              <use href="./images/symbol-defs.svg#icon-man"></use>
+            </svg>
+          </div>
+          <div class="backdrop__form-part">
+            <label for="tel">Телефон</label>
+            <input class="backdrop__form-put" type="tel" name="tel" id="tel" />
+            <svg class="icon-form" width="18" height="18">
+              <use href="./images/symbol-defs.svg#icon-black-phone"></use>
+            </svg>
+          </div>
+          <div class="backdrop__form-part">
+            <label for="mail">Почта</label>
+            <input class="backdrop__form-put" type="email" name="mail" id="mail" />
+            <svg class="icon-form" width="16" height="12">
+              <use href="./images/symbol-defs.svg#icon-black-mail"></use>
+            </svg>
+          </div>
+          <div class="backdrop__form-part">
+            <label for="feedback">Комментарий</label>
+            <textarea
+              class="backdrop__form-put"
+              name="feedback"
+              id="feedback"
+              rows="5"
+              placeholder="Введите текст"
+            ></textarea>
+          </div>
+          <label class="backdrop__form-part backdrop__form-part--checkbox">
+            <input class="checking-icon" type="checkbox" name="check" />
+            <span class="icon-check"
+              ><svg class="app-icon" width="18" height="18">
+                <use href="./images/symbol-defs.svg#icon-check"></use></svg
+            ></span>
+            Соглашаюсь с рассылкой и принимаю<a class="checklink" href="#"> Условия договора</a>
+          </label>
+          <button class="form-button back-but" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
