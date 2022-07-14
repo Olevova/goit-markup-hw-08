@@ -60,6 +60,20 @@ ul {
   border-radius: 4px;
 }
 
+.title {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: rgb(33, 33, 33);
+}
+
+.title--none {
+  display: none;
+  text-align: center;
+}
+
 .logo {
   padding-top: 24px;
   padding-bottom: 25px;
@@ -96,6 +110,20 @@ ul {
   padding-right: 15px;
 }
 
+.contacts:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contacts__link {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+
 header {
   border-bottom: 1px solid rgb(236, 236, 236);
 }
@@ -112,7 +140,7 @@ header {
           align-items: center;
 }
 
-.header__nav-menu {
+.header__navmenu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -125,7 +153,7 @@ header {
       align-self: stretch;
 }
 
-.header__nav-link {
+.header__navlink {
   display: inline-block;
   padding-top: 25px;
   padding-bottom: 25px;
@@ -144,16 +172,16 @@ header {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header__nav-link:hover, .header__nav-link:focus {
+.header__navlink:hover, .header__navlink:focus {
   color: rgb(33, 150, 243);
   fill: rgb(33, 150, 243);
 }
 
-.header__nav-link--active {
+.header__navlink--active {
   position: relative;
   color: rgb(33, 150, 243);
 }
-.header__nav-link--active::after {
+.header__navlink--active::after {
   position: absolute;
   content: "";
   width: 100%;
@@ -171,7 +199,7 @@ header {
   margin-right: 50px;
 }
 
-.header__nav-auth {
+.header__auth {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -188,24 +216,13 @@ header {
 }
 
 /* задаємо відступ між елементами*/
-.header__nav-auth-cont:not(:last-child) {
-  margin-right: 50px;
-}
-
-.header__auth-link {
+.header__contacts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: #757575;
   /* transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); - це короткий запис */
   -webkit-transition-property: color;
   transition-property: color;
@@ -214,22 +231,22 @@ header {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header__auth-link:hover, .header__auth-link:focus {
+.header__contacts:hover, .header__contacts:focus {
   color: rgb(33, 150, 243);
   fill: rgb(33, 150, 243);
 }
 
-.header__auth-icon {
+.contacts__icon {
   margin-right: 10px;
   fill: currentColor;
 }
 
-.header__auth-icon--mail {
+.contacts__icon--mail {
   width: 16px;
   height: 12px;
 }
 
-.header__auth-icon--phone {
+.contacts__icon--phone {
   width: 10px;
   height: 16px;
 }
@@ -289,26 +306,12 @@ header {
   padding-bottom: 94px;
 }
 
-.advantage__card-title {
-  font-family: "Roboto";
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
-  color: rgb(33, 33, 33);
-}
-
 /* розмітка тексту переваг */
 .advantage__paragraf {
   font-size: 14px;
   line-height: 1.71;
   margin-top: 10px;
   margin-bottom: 0px;
-}
-
-.advantage__title {
-  display: none;
-  text-align: center;
 }
 
 .advantage__card::before {
@@ -645,7 +648,6 @@ address {
 
 .footer__mail,
 .footer__tel {
-  font-size: 14px;
   line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
 }
@@ -937,6 +939,13 @@ address {
   -webkit-transform: translate(-50%, -50%) scale(1.2);
           transform: translate(-50%, -50%) scale(1.2);
 }
+.backdrop--is-hidden .backdrop__modal {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate(-50%, -50%) rotate(0deg);
+          transform: translate(-50%, -50%) rotate(0deg);
+}
 
 .backdrop__modal {
   opacity: 1;
@@ -962,7 +971,7 @@ address {
   transition: transform 250ms cubic-bezier(0.15, 0.59, 0.76, 0.25) 250ms, -webkit-transform 250ms cubic-bezier(0.15, 0.59, 0.76, 0.25) 250ms;
 }
 
-.backdrop__modal-cross-icon {
+.backdrop__crossicon {
   position: absolute;
   fill: black;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -990,11 +999,11 @@ address {
   top: 8px;
   right: 8px;
 }
-.backdrop__modalbutton:hover .backdrop__modal-cross-icon, .backdrop__modalbutton:focus .backdrop__modal-cross-icon {
+.backdrop__modalbutton:hover .backdrop__crossicon, .backdrop__modalbutton:focus .backdrop__crossicon {
   fill: rgb(33, 150, 243);
 }
 
-.backdrop__modal-cross-icon {
+.backdrop__crossicon {
   position: absolute;
   fill: black;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1014,6 +1023,15 @@ address {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.backdrop__label {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
 }
 
 .backdrop__form-part {
