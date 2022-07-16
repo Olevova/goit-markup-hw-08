@@ -79,5 +79,8 @@
 <symbol id="icon-man" viewBox="0 0 18 18">
 <path d="M9 9a3 3 0 1 0 0-6 3 3 0 1 0 0 6Zm0 1.5c-2.003 0-6 1.005-6 3v.75c0 .412.337.75.75.75h10.5c.412 0 .75-.338.75-.75v-.75c0-1.995-3.998-3-6-3Z"/>
 </symbol>
+<symbol id="menubuttom" viewBox="0 0 40 40">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8 14.667V12h24v2.667H8Zm0 6.666h24v-2.666H8v2.666ZM8 28h24v-2.667H8V28Z"/>
+</symbol>
 </defs>
 </svg>
