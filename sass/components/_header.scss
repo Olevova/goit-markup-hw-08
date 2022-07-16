@@ -1,12 +1,21 @@
+
 header {
   border-bottom: 1px solid $header-border;
+
 }
 
 .header__nav {
   @include centerFlex();
 }
 
+@media(min-width: 768px){
+  header{
+   background-color: aqua;
+  }
+}
+
 .header__navmenu{
+  
   display: flex;
   align-items: center;
   margin-left: 93px;
