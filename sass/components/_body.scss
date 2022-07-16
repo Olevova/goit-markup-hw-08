@@ -15,12 +15,7 @@ body {
   font-size: 14px;
   letter-spacing: 0.03em;
 }
-@media(min-width:768) {
-  body {
-    background-color: rgb(102, 20, 20);
-  
-      }
-}
+
 a,
 button {
   text-decoration: none;
@@ -42,7 +37,7 @@ ul {
   padding-left: 0px;
 }
 
-.wrapper {
-  display: flex;
-  align-items: center;
-}
+// .wrapper {
+//   display: flex;
+//   align-items: center;
+// }
