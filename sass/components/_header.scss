@@ -5,6 +5,7 @@ header {
 @media screen and(min-width:480px) {
   .container {
     width: 450px;
+    height: 60px;
     margin: 0;
   }
   .header__navmenu, .header__auth{
@@ -13,9 +14,11 @@ header {
   .header {
     position: relative;
     width: 480px;
+    background-color: yellow;
   }
   header {
     padding: 15px 0px;
+
   }
   .header__humburger {
     position: absolute;
@@ -30,4 +33,41 @@ header {
   .header__humburger:hover {
       fill: $accent-text-color
     }
+}
+
+@media screen and(min-width:760px) {
+  .container {
+    width: 750px;
+    height: 60px;
+    margin: 0;
+  }
+
+  .header__navmenu,
+  .header__auth {
+    display: none;
+  }
+
+  .header {
+    position: relative;
+    width: 750px;
+    background-color:black;
+  }
+
+  header {
+    padding: 15px 0px;
+  }
+
+  .header__humburger {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    outline: 1px dashed green;
+    fill: currentColor
+  }
+
+  .header__humburger:hover {
+    fill: $accent-text-color
+  }
 }
