@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="Home work" content="Домашне завдання по HTML + CSS №1" />
     <title>Home work 1</title>
     <!-- підключення шрифтів -->
@@ -59,8 +60,9 @@
           </ul>
         </div>
       </div>
-      <buttom type="buttom">
+      <button type="button" class="menu-button">
         <svg class="header__humburger" width="40" hiegh="40">
+          <use href="./images/symbol-defs.svg#menubuttom"></use>
           <use href="./images/symbol-defs.svg#menubuttom"></use>
         </svg>
       </button>
@@ -79,11 +81,11 @@
         </div>
       </section>
 
-      <!--Секція друга Список Переваг-->
+      <!-- Секція друга Список Переваг -->
       <section class="advantage">
         <div class="container">
           <h2 class="title title--none">Наши преимущества</h2>
-          <!--буде схована, вставлена для кращого розуміння для людини що переглядає HTML-->
+          буде схована, вставлена для кращого розуміння для людини що переглядає HTML
           <ul class="wrapper">
             <li class="advantage__card">
               <h3 class="title">Внимание к деталям</h3>
@@ -113,7 +115,7 @@
         </div>
       </section>
       <!--Секція третя Чим ми займаємось-->
-      <section class="direction">
+      <!-- <section class="direction">
         <div class="container">
           <h2 class="direction__title">Чем мы занимаемся</h2>
           <ul class="direction__block">
@@ -137,9 +139,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!--Секція четверта Наша команда-->
-      <section class="team">
+      <!-- <section class="team">
         <div class="container">
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__wrapper">
@@ -268,9 +270,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- Секція Наші клієнти -->
-      <section class="clients">
+      <!-- <section class="clients">
         <div class="container">
           <h2 class="clients__title">Постоянные клиенты</h2>
           <ul class="client__block">
@@ -318,10 +320,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
     </main>
     <!--Підвал-->
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container">
         <div class="footer__block">
           <div class="footer__addressblock">
@@ -394,9 +396,9 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer> -->
     <!-- Створюємо бекдроп -->
-    <div class="backdrop backdrop--is-hidden" data-modal>
+    <!-- <div class="backdrop backdrop--is-hidden" data-modal>
       <div class="backdrop__modal">
         <button type="button" data-modal-close class="backdrop__modalbutton">
           <svg class="backdrop__crossicon" width="11" height="11">
@@ -406,7 +408,7 @@
         <form action="#" class="backdrop__form" name="modal-form">
           <p class="backdrop__title">Оставьте свои данные, мы вам перезвоним</p>
           <!-- Можна тегом Стронг  -->
-          <div class="backdrop__form-part">
+    <!-- <div class="backdrop__form-part">
             <label class="backdrop__label" for="text">Имя</label>
             <input class="backdrop__form-put" type="text" name="text" id="text" />
             <svg class="icon-form" width="18" height="18">
@@ -450,7 +452,7 @@
           </button>
         </form>
       </div>
-    </div>
+    </div> -->
     <script src="./js/modal.js"></script>
   </body>
 </html>

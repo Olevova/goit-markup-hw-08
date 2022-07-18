@@ -24,12 +24,12 @@
     text-align: center;
 }
 
-@mixin container ( $width:480px, $margin:0px, $padding-top:0px, $padding-bottom:0px, $padding-left:0px, $padding-right:0px )
-{ 
-width: $width;
-margin: $margin;
-padding-top: $padding-top;
-padding-bottom: $padding-bottom;
-padding-left: $padding-left;
-padding-right: $padding-right;
-  }
+// @mixin container ( $width:480px, $margin:0px, $padding-top:0px, $padding-bottom:0px, $padding-left:0px, $padding-right:0px )
+// { 
+// width: $width;
+// margin: $margin;
+// padding-top: $padding-top;
+// padding-bottom: $padding-bottom;
+// padding-left: $padding-left;
+// padding-right: $padding-right;
+//   }
