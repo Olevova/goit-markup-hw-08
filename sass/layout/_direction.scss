@@ -1,0 +1,53 @@
+.direction {
+    display:none;
+    
+    @media screen and(min-width:1200px) {
+        display: block;
+        @include markup();
+        padding-top: 0px;
+    }
+}
+
+.direction__title {
+    @include title();
+}
+
+.direction__block {
+    display: flex;
+}
+
+.direction__card {
+    width: 370px;
+    position: relative;
+    &:not(:last-child) {
+            margin-right: 30px;
+        }
+}
+
+.direction__link>img {
+    display: block;
+    max-height: 100%;
+    height: auto;
+}
+
+/* додаємо написи на картники */
+.direction__description {
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    background-color: rgba(47, 48, 58, 0.8);
+
+    font-family: Roboto;
+
+    font-weight: 700;
+    line-height: 1.17;
+    color: $background-color;
+    text-transform: uppercase;
+}
