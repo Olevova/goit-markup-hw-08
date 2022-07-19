@@ -95,7 +95,7 @@ ul {
   padding-bottom: 25px;
   color: rgb(33, 150, 243);
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 481px) {
   .logo {
     font-family: "Raleway";
     font-style: normal;
@@ -278,7 +278,7 @@ header {
   display: -ms-flexbox;
   display: flex;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 481px) {
   .header__humburger {
     display: none;
   }
@@ -294,7 +294,7 @@ header {
   background-color: transparent;
   border: none;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 481px) {
   .menu-button {
     display: none;
   }
@@ -310,7 +310,7 @@ header {
   -ms-flex-item-align: stretch;
       align-self: stretch;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 481px) {
   .header__navmenu {
     display: -webkit-box;
     display: -ms-flexbox;

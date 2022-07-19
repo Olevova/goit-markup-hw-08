@@ -24,7 +24,7 @@ header {
     display: flex;
    
 
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: 481px) {
     display: none;
   }
 
@@ -40,7 +40,7 @@ header {
   background-color: transparent;
   border: none;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 481px) {
       display: none;
 }
 }
@@ -52,7 +52,7 @@ header {
    /* outline: 2px dashed green; */
    align-self: stretch;
 
-  @media screen and (min-width: 480px){
+  @media screen and (min-width: 481px){
     display: flex;
   }
 
