@@ -12,7 +12,11 @@
     letter-spacing: 0.02em;
     color: $primary-text-color;
 
+    @media screen and (min-width: 480px) and (max-width:1200px) {
+            padding-bottom: 10px;
+
     }
+}
 
 // .contacts__icon {
 //     margin-right: 10px;

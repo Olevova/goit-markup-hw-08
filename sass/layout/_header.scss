@@ -17,20 +17,32 @@ header {
   
 .header__humburger{
     position: absolute;
-    right: 15px;
-    top: 10px;
+    right: 0;
+    top: 0;
     width: 40px;
     height: 40px;
+    display: flex;
+   
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 460px) {
     display: none;
   }
 
   }
 
 .menu-button {
-  display: none;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
 
+  @media screen and (min-width: 460px) {
+      display: none;
+}
 }
 
  .header__navmenu {
@@ -40,7 +52,7 @@ header {
    /* outline: 2px dashed green; */
    align-self: stretch;
 
-  @media screen and (min-width: 768px){
+  @media screen and (min-width: 460px){
     display: flex;
   }
 
@@ -96,12 +108,17 @@ header {
 
  .header__auth {
   display: none;
-   justify-content: none;
-   margin-left: auto;
+  justify-content: none;
+  margin-left: auto;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 480px) and (max-width:1200px) {
           @include centerFlex();
+          flex-direction: column;
+          align-items: flex-start;
          }
+  @media screen and (min-width: 1200px){
+      @include centerFlex();
+  }
 
  }
 
@@ -125,6 +142,7 @@ header {
 
   }
 }
+
 
 .contacts__icon {
   margin-right: 10px;
