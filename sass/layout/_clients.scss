@@ -1,0 +1,64 @@
+.clients {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.clients__title {
+   @include title();
+    font-size: 28px;
+}
+
+.client__block {
+    display: flex;
+    gap:15px;
+    justify-content:center;
+    flex-wrap: wrap;
+    @media screen and(min-width:1200px) {
+    flex-wrap: nowrap;
+    }
+
+}
+
+.clients__card {
+    display: block;
+    flex-basis: calc((100% - 2 * 30px) / 2);
+    height: 92px;
+    /* border: 1px solid var(--company-color); */
+    text-align: center;
+    /* border-radius: 4px; */
+    @media screen and(min-width:768px) {
+        flex-basis: calc((100% - 3 * 30px) / 3);
+    }
+    @media screen and(min-width:1200px) {
+        flex-basis: calc((100% - 6 * 30px) / 6);
+    }
+
+}
+
+.clients__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    color: $company-color;
+    transition: border-color 250ms $primary-cube;
+    border-radius: 4px;
+    border: 1px solid $company-color;
+        &:hover .clients__labe,
+        &:focus .clients__labe,
+        &:hover,
+        &:focus{
+            fill: $accent-text-color;
+                border-color: $accent-text-color;
+                cursor: pointer;
+        } ;
+        
+
+
+}
+
+.clients__labe {
+    fill: $company-color;
+    transition: fill 250ms $primary-cube;
+}

@@ -12,6 +12,12 @@
     line-height: 1.16;
     letter-spacing: 0.03em;
     width: 149px;
+
+  @media screen and(min-width: 481px) and (max-width:768px) {
+    padding-top: 0;
+    padding-bottom: 0;
+    
+  }
     
   }
 
@@ -28,8 +34,11 @@
 
 .logo__secondpart {
   display: inline-block;
-
   color: $title-text-color;
+  @media screen and (min-width:768px) and (max-width:1200px) {
+    display: inline;
+    
+  }
 }
 
 .logo--footer {

@@ -30,8 +30,10 @@
     <header class="header">
       <div class="container">
         <div class="wrapper">
+          <a class="logo" href="/">Web<span class="logo__secondpart">Studio</span></a>
           <nav class="header__nav">
-            <a class="logo" href="/">Web<span class="logo__secondpart">Studio</span></a>
+            <!-- <a class="logo" href="/">Web<span class="logo__secondpart">Studio</span></a> -->
+
             <ul class="header__navmenu">
               <li class="header__nav">
                 <a class="header__navlink header__navlink--active" href="./index.html">Студия</a>
@@ -60,10 +62,10 @@
           </ul>
         </div>
       </div>
-      <button type="button" class="menu-button">
+      <button type="button" class="menu-button is-open" data-menu-button>
         <svg class="header__humburger" width="40" hiegh="40">
-          <use href="./images/symbol-defs.svg#menubuttom"></use>
-          <use href="./images/symbol-defs.svg#menubuttom"></use>
+          <use class="iconhumb" href="./images/symbol-defs.svg#menubuttom"></use>
+          <use class="iconcross" href="./images/symbol-defs.svg#icon-close-black"></use>
         </svg>
       </button>
     </header>
@@ -140,8 +142,8 @@
           </ul>
         </div>
       </section>
-      <!--Секція четверта Наша команда-->
-      <!-- <section class="team">
+      <!-- Секція четверта Наша команда -->
+      <section class="team">
         <div class="container">
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__wrapper">
@@ -270,9 +272,9 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- Секція Наші клієнти -->
-      <!-- <section class="clients">
+      <section class="clients">
         <div class="container">
           <h2 class="clients__title">Постоянные клиенты</h2>
           <ul class="client__block">
@@ -320,7 +322,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
     </main>
     <!--Підвал-->
     <!-- <footer class="footer">
@@ -454,5 +456,6 @@
       </div>
     </div> -->
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
