@@ -49,13 +49,17 @@
 }
 
 .network__title {
-    line-height: 1.14;
-    font-weight: 700;
-    text-align: left;
     text-transform: uppercase;
     color: $background-color;
     margin: 0;
     margin-bottom: 20px;
+    line-height: 1.14;
+    font-weight: 700;
+    text-align: center;
+    
+    @media screen and(min-width:768px){
+    text-align: left;
+    }
 }
 
 .network__list {
