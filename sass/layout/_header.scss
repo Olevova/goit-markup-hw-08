@@ -24,7 +24,7 @@ header {
     display: flex;
    
 
-    @media screen and (min-width: 481px) {
+    @media screen and (min-width: 768px) {
     display: none;
   }
 
@@ -39,8 +39,9 @@ header {
   height: 40px;
   background-color: transparent;
   border: none;
+  z-index: 1000;
 
-  @media screen and (min-width: 481px) {
+  @media screen and (min-width: 768px) {
       display: none;
 }
 }
@@ -99,10 +100,13 @@ header {
 
 .header__nav {
   height: 100%;
-  display: flex;
+  display: none;
 
   &:not(:last-child) {
     margin-right: 50px;
+  }
+  @media screen and(min-width:768px) {
+    display: flex;
   }
 }
 
@@ -172,4 +176,114 @@ header {
 
 .menu-button .iconcross {
   display: none;
+}
+
+.hiddenmenu{
+  position: fixed;
+  top:0;
+  display:none;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  outline: 2px solid green;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  padding: 48px 40px;
+
+  &.is-open{
+    display: flex;
+  }
+
+  @media screen and(min-width:768px) {
+    display: none;
+  }
+}
+
+.hiddenmenu__navmenu{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: auto;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.hiddenmenu__nav{
+  text-align: left;
+  &:not(:last-child){
+    margin-bottom: 32px;
+  }
+}
+
+.hiddenmenu__auth {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 64px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+  & .contacts__link{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+  }
+  & .contacts:not(:last-child) {
+    margin: 0;  
+    margin-bottom: 32px;
+    }
+}
+
+
+.hiddenmenu_link {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  
+}
+
+.hiddenmenu__navlink{
+  font-weight: 500;
+    font-size: 40px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: $title-text-color;
+
+    &:hover,
+    :focus {
+      color: $accent-text-color;
+  
+    }
+}
+
+.hiddenmenu__navlink--active {
+  color: $accent-text-color;
+}
+
+.hiddenlink{
+color:$accent-text-color;
+padding-right: 10px;
+
+  &:not(:last-child) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    ;
+  }
 }

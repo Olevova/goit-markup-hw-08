@@ -105,24 +105,14 @@ img {
 .logo {
   padding-top: 24px;
   padding-bottom: 25px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  width: 149px;
   color: rgb(33, 150, 243);
-}
-@media screen and (min-width: 481px) {
-  .logo {
-    font-family: "Raleway";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 1.16;
-    letter-spacing: 0.03em;
-    width: 149px;
-  }
-}
-@media screen and (min-width: 481px) and (min-width: 481px) and (max-width: 768px) {
-  .logo {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
 }
 @media screen and (min-width: 1200px) {
   .logo {
@@ -418,7 +408,7 @@ header {
   display: -ms-flexbox;
   display: flex;
 }
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 768px) {
   .header__humburger {
     display: none;
   }
@@ -433,8 +423,9 @@ header {
   height: 40px;
   background-color: transparent;
   border: none;
+  z-index: 1000;
 }
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 768px) {
   .menu-button {
     display: none;
   }
@@ -499,12 +490,17 @@ header {
 
 .header__nav {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
 }
 .header__nav:not(:last-child) {
   margin-right: 50px;
+}
+@media screen and (min-width: 768px) {
+  .header__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .header__auth {
@@ -602,6 +598,137 @@ header {
 
 .menu-button .iconcross {
   display: none;
+}
+
+.hiddenmenu {
+  position: fixed;
+  top: 0;
+  display: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  outline: 2px solid green;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  padding: 48px 40px;
+}
+.hiddenmenu.is-open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media screen and (min-width: 768px) {
+  .hiddenmenu {
+    display: none;
+  }
+}
+
+.hiddenmenu__navmenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+  margin-bottom: auto;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.hiddenmenu__nav {
+  text-align: left;
+}
+.hiddenmenu__nav:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.hiddenmenu__auth {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-bottom: 64px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+}
+.hiddenmenu__auth .contacts__link {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+}
+.hiddenmenu__auth .contacts:not(:last-child) {
+  margin: 0;
+  margin-bottom: 32px;
+}
+
+.hiddenmenu_link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hiddenmenu__navlink {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: rgb(33, 33, 33);
+}
+.hiddenmenu__navlink:hover,
+.hiddenmenu__navlink :focus {
+  color: rgb(33, 150, 243);
+}
+
+.hiddenmenu__navlink--active {
+  color: rgb(33, 150, 243);
+}
+
+.hiddenlink {
+  color: rgb(33, 150, 243);
+  padding-right: 10px;
+}
+.hiddenlink:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
 .sloganhero {
