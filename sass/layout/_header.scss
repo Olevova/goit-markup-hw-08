@@ -44,6 +44,10 @@ header {
   @media screen and (min-width: 768px) {
       display: none;
 }
+&.is-open{
+  position: fixed;
+}
+
 }
 
  .header__navmenu {
@@ -166,6 +170,7 @@ header {
 .menu-button.is-open .iconhumb{
   display:none;
 }
+
 .menu-button .iconhumb{
   display: block;
 }
@@ -193,11 +198,17 @@ header {
 
   &.is-open{
     display: flex;
+    @media screen and(min-width:768px) {
+        display: none;
+      }
+
   }
 
   @media screen and(min-width:768px) {
     display: none;
   }
+
+
 }
 
 .hiddenmenu__navmenu{
