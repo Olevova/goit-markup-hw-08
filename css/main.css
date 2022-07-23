@@ -391,7 +391,6 @@ img {
 
 header {
   border-bottom: 1px solid rgb(236, 236, 236);
-  outline: 1px dashed red;
 }
 
 .header {
@@ -1539,4 +1538,313 @@ header {
     margin-left: 20px;
     margin-right: auto;
   }
+}
+
+.backdrop {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  -webkit-transition: opacity 250ms cubic-bezier(0.15, 0.59, 0.76, 0.25), -webkit-transform 250ms cubic-bezier(0.15, 0.59, 0.76, 0.25);
+  transition: opacity 250ms cubic-bezier(0.15, 0.59, 0.76, 0.25), -webkit-transform 250ms cubic-bezier(0.15, 0.59, 0.76, 0.25);
+  transition: transform 250ms cubic-bezier(0.15, 0.59, 0.76, 0.25), opacity 250ms cubic-bezier(0.15, 0.59, 0.76, 0.25);
+  transition: transform 250ms cubic-bezier(0.15, 0.59, 0.76, 0.25), opacity 250ms cubic-bezier(0.15, 0.59, 0.76, 0.25), -webkit-transform 250ms cubic-bezier(0.15, 0.59, 0.76, 0.25);
+  /* animation-name: backdrop-animation;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+}
+@media screen and (max-width: 767px) {
+  .backdrop {
+    z-index: 1500;
+    margin-left: 15px;
+    margin-top: 93px;
+    margin-right: 15px;
+    margin-bottom: auto;
+  }
+}
+.backdrop--is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  /* visibility: hidden; */
+  -webkit-transform: translate(-50%, -50%) scale(1.2);
+          transform: translate(-50%, -50%) scale(1.2);
+}
+.backdrop--is-hidden .backdrop__modal {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate(-50%, -50%) rotate(0deg);
+          transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.backdrop__modal {
+  opacity: 1;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%) rotate(0deg);
+          transform: translate(-50%, -50%) rotate(0deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 40px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.15, 0.59, 0.76, 0.25) 250ms;
+  transition: -webkit-transform 250ms cubic-bezier(0.15, 0.59, 0.76, 0.25) 250ms;
+  transition: transform 250ms cubic-bezier(0.15, 0.59, 0.76, 0.25) 250ms;
+  transition: transform 250ms cubic-bezier(0.15, 0.59, 0.76, 0.25) 250ms, -webkit-transform 250ms cubic-bezier(0.15, 0.59, 0.76, 0.25) 250ms;
+}
+@media screen and (max-width: 768px) {
+  .backdrop__modal {
+    margin-top: 93px;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 609px;
+    width: 90vw;
+    margin-bottom: 94px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .backdrop__modal {
+    width: 528px;
+    height: 581px;
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.backdrop__crossicon {
+  position: absolute;
+  fill: black;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 18px;
+  height: 18px;
+}
+
+.backdrop__modalbutton {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  top: 8px;
+  right: 8px;
+}
+.backdrop__modalbutton:hover .backdrop__crossicon, .backdrop__modalbutton:focus .backdrop__crossicon {
+  fill: rgb(33, 150, 243);
+}
+
+.backdrop__crossicon {
+  position: absolute;
+  fill: black;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 18px;
+  height: 18px;
+}
+
+.backdrop__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.backdrop__label {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+}
+
+.backdrop__form-part {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 10px;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop__form-part:focus-within {
+  fill: rgb(33, 150, 243);
+  cursor: pointer;
+  border-color: rgb(33, 150, 243);
+}
+.backdrop__form-part:focus-within .backdrop__form-put {
+  border-color: rgb(33, 150, 243);
+}
+
+.backdrop__form-part > labe {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+}
+
+.backdrop__form-put {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-top: 4px;
+  padding-left: 40px;
+  outline: transparent;
+  -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer__form-button--back {
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+}
+
+.backdrop__form-put[name=feedback] {
+  width: 100%;
+  height: 120px;
+  margin-bottom: 20px;
+  margin-top: 4px;
+  padding: 12px 16px;
+  resize: none;
+  outline: transparent;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.backdrop__checking-icon[type=checkbox] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clear: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.backdrop__form-part--checkbox {
+  display: inline-block;
+  width: 100%;
+  height: 24px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.71;
+  color: #757575;
+}
+@media screen and (min-width: 768px) {
+  .backdrop__form-part--checkbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 14px;
+  }
+}
+
+.backdrop__title {
+  margin: 0;
+  margin-bottom: 12px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: rgb(33, 33, 33);
+}
+
+.icon-check {
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid rgb(33, 33, 33);
+  border-radius: 4px;
+}
+
+.app-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  fill: transparent;
+}
+
+.checklink {
+  text-decoration: underline;
+  color: rgb(33, 150, 243);
+}
+
+.backdrop__checking-icon:checked + .icon-check,
+.backdrop__checking-icon:checked + .icon-check > .app-icon {
+  background-color: rgb(33, 150, 243);
+  border: transparent;
+  fill: #ffffff;
+  border-radius: 4px;
+}
+
+.icon-form {
+  position: absolute;
+  top: 50%;
+  left: 15px;
 }/*# sourceMappingURL=main.css.map */
